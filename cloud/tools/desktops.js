@@ -1,7 +1,7 @@
 module.exports = [
 	{
 		'zone': 'etage',
-		'name': 'etage-1',
+		'name': 'ilot-etage-1',
 		'desktops': [
 			{
 				'name': 'etage-1-1',
@@ -25,7 +25,7 @@ module.exports = [
 	},
 	{
 		'zone': 'etage',
-		'name': 'etage-2',
+		'name': 'ilot-etage-2',
 		'desktops': [
 			{
 				'name': 'etage-2-1',
@@ -49,7 +49,7 @@ module.exports = [
 	},
 	{
 		'zone': 'etage',
-		'name': 'etage-3',
+		'name': 'ilot-etage-3',
 		'desktops': [
 			{
 				'name': 'etage-3-1',
@@ -73,7 +73,7 @@ module.exports = [
 	},
 	{
 		'zone': 'etage',
-		'name': 'etage-4',
+		'name': 'ilot-etage-4',
 		'desktops': [
 			{
 				'name': 'etage-4-1',
@@ -97,7 +97,7 @@ module.exports = [
 	},
 	{
 		'zone': 'etage',
-		'name': 'etage-5',
+		'name': 'ilot-etage-5',
 		'desktops': [
 			{
 				'name': 'etage-5-1',
@@ -121,7 +121,7 @@ module.exports = [
 	},
 	{
 		'zone': 'etage',
-		'name': 'etage-6',
+		'name': 'ilot-etage-6',
 		'desktops': [
 			{
 				'name': 'etage-6-1',
@@ -145,7 +145,7 @@ module.exports = [
 	},
 	{
 		'zone': 'etage',
-		'name': 'etage-7',
+		'name': 'ilot-etage-7',
 		'desktops': [
 			{
 				'name': 'etage-7-1',

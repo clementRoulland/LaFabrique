@@ -6,11 +6,31 @@ module.exports = function(){
 	var authentication = require('cloud/tools/require-user.js');
 
 	app.get('/', authentication, getAll);
+	app.get('/zone/:zone', authentication, getByZone);
 	app.get('/generateAllDesktops', authentication, generateAllDesktops);
 	app.get('/clearAllDesktops', authentication, clearAllDesktops);
 
 	function getAll(res, res){
 		var query = new Parse.Query(DesktopGroup);
+		query.include("desktops.user");
+		query.include("desktops.phone");
+		query.find({
+			success: function(results) {
+				var desktopGroups = new Array();
+				results.forEach(function(itDesktopGroup){
+					var desktopGroup = toJSON(itDesktopGroup);
+					desktopGroups.push(desktopGroup);
+				});
+				res.json(desktopGroups);
+			},
+			error: error
+		});
+	};
+
+	function getByZone(res, res){
+		var zone = req.params.zone;
+		var query = new Parse.Query(DesktopGroup);
+		query.equalTo('zone', zone);
 		query.include("desktops.user");
 		query.include("desktops.phone");
 		query.find({
