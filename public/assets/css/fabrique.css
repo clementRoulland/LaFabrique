@@ -40,19 +40,31 @@ div.selection:hover {
 		position: absolute;
 	}
 	.poste-travail {
-		display: table;
 		height: 85px;
-		width: 100%;
+		width: 80px;
+		float: left;
+	}
+	.zone-six-bureaux .poste-travail:nth-child(odd) .bureau,
+	.zone-six-bureaux .poste-travail:nth-child(odd) .chaise {
+		float: left;
+	}
+	.zone-six-bureaux .poste-travail:nth-child(even) .bureau,
+	.zone-six-bureaux .poste-travail:nth-child(even) .chaise {
+		float: right;
+	}
+	.zone-trois-bureaux .bureau, 
+	.zone-trois-bureaux .chaise {
+		float: left;
 	}
 		.bureau {
-			display: table-cell;
 			border: 1px solid #ccc;
-			width: 25%;
+			width: 40px;
+			height: 85px;
 		}
 		.chaise {
-			display: table-cell;
+			width: 40px;
+			height: 85px;
 			position: relative;
-			width: 25%;
 		}
 			.personne {
 				border-radius: 50%;
@@ -151,12 +163,12 @@ div.selection:hover {
 			left: 375px;
 		}
 
-		#etage-bureaux1 {
+		#etage-bureaux1, #ilot-etage-1 {
 			left: 50px;
 			bottom: 0px;
 		}
 
-		#etage-bureaux2 {
+		#etage-bureaux2, #ilot-etage-2 {
 			right: 185px;
 			bottom: 0px;
 		}

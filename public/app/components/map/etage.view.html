@@ -17,162 +17,17 @@
 			</div>
 			<div class="etage-plateau">
 
-				<div class="zone-six-bureaux" id="etage-bureaux1">
-					<div class="poste-travail">
+				<div ng-repeat="group in vm.groups" class="zone-six-bureaux" id="{{group.name}}">
+					<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
 						<div class="chaise selection"><div class="personne empty"></div></div>
 						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-					
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne away"></div></div>
-					</div>
-
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne there"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
 					</div>
 				</div>
 
-				<div class="zone-six-bureaux" id="etage-bureaux2">
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-					
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
 
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-				</div>
 
-				<div class="zone-six-bureaux" id="etage-bureaux3">
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-					
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
 
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-				</div>
-
-				<div class="zone-six-bureaux" id="etage-bureaux4">
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-					
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-				</div>
-
-				<div class="zone-six-bureaux" id="etage-bureaux5">
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-					
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-				</div>
-
-				<div class="zone-six-bureaux"  id="etage-bureaux6">
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-					
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-
-					<div class="poste-travail">
-						<div class="chaise selection"><div class="personne empty"></div></div>
-						<div class="bureau selection"></div>
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-				</div>
-
-				<div class="zone-trois-bureaux"  id="etage-bureaux7">
-					<div class="poste-travail">
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-					
-					<div class="poste-travail">
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-
-					<div class="poste-travail">
-						<div class="bureau selection"></div>
-						<div class="chaise selection"><div class="personne empty"></div></div>
-					</div>
-				</div>
-
-				<div id="etage-sanitaires" class="cadre-gauche cadre-droit cadre-haut">
+				<div id="etage-sanitaires" class="cadre-gauche cadre-droite cadre-haut">
 				</div>
 
 				<div id="vide-escalier" class="cadre">
