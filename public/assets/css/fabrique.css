@@ -28,6 +28,11 @@ div.selection:hover {
 	height: 900px;
 	position: relative;
 }
+.zone-commun {
+	width: 1200px;
+	height: 800px;
+	position: relative;
+}
 
 	.zone-six-bureaux {
 		width: 160px;
@@ -84,6 +89,25 @@ div.selection:hover {
 			}
 
 
+	/** commun **/
+	#grande-fabrique {
+		height: 100%;
+		width: 480px;
+	}
+	#stockage {
+		height: 160px;
+		width: 440px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+	#fabrication {
+		height: 640px;
+		width: 440px;
+		position: absolute;
+		top: 160px;
+		right: 0px;
+	}
 
 
 	/** RDC **/
@@ -91,17 +115,68 @@ div.selection:hover {
 	{
 		height: 300px;
 		width: 100%;
+		position: relative;
 	}
+		#bureau-commerce {
+			width: 180px;
+			height: 100%;
+			position: absolute;
+			right: 0px;
+		}
+		#a4 {
+			width: 150px;
+			height: 180px;
+			position: absolute;
+			top: 50px;
+		}
+		#bureau-marketing {
+			height: 300px;
+			width: 180px;
+			position: absolute;
+			right: 0px;
+		}
+		#rdc-sanitaires {
+			width: 225px;
+			height: 100%;
+			position: relative;
+			left: 218px;
+		}
+		#bureau-tag {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 475px;
+			height: 100%;
+		}
+		#rdc-cafe {
+			position: absolute;
+			top: 0px;
+			right: 575px;
+			height: 200px;
+			width: 75px;
+		}
+		#a8 {
+			position: absolute;
+			top: 0px;
+			right: 475px;
+			height: 200px;
+			width: 100px;
+		}
+		#imprimante {
+			position: absolute;
+			bottom: 0px;
+			right: 475px;
+			height: 100px;
+			width: 175px;
+		}
 
 	#patio {
 		position: absolute;
 		top: 300px;
-		left: 230px;
-		width: 725px;
+		right: 180px;
+		width: 800px;
 		height: 300px;
 	}
-
-
 
 
 
