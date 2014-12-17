@@ -1,0 +1,195 @@
+* {
+	box-sizing: border-box;
+}
+
+.cadre {
+	border: 1px solid #ccc;
+}
+.cadre-haut {
+	border-top: 1px solid #ccc;
+}
+.cadre-bas {
+	border-bottom: 1px solid #ccc;
+}
+.cadre-droite {
+	border-right: 1px solid #ccc;
+}
+.cadre-gauche {
+	border-left: 1px solid #ccc;
+}
+
+div.selection:hover {
+	background-color: red;
+}
+
+/** commun **/
+.zone {
+	width: 1200px;
+	height: 900px;
+	position: relative;
+}
+
+	.zone-six-bureaux {
+		width: 160px;
+		height: 255px;
+		position: absolute;
+	}
+	.zone-trois-bureaux {		
+		width: 80px;
+		height: 255px;
+		position: absolute;
+	}
+	.poste-travail {
+		display: table;
+		height: 85px;
+		width: 100%;
+	}
+		.bureau {
+			display: table-cell;
+			border: 1px solid #ccc;
+			width: 25%;
+		}
+		.chaise {
+			display: table-cell;
+			position: relative;
+			width: 25%;
+		}
+			.personne {
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				border: 1px solid #ccc;
+				margin: 5px;
+				position: absolute;
+				top: 25px;
+			}
+			.personne.away {
+				background-color: #ccc;
+			}
+			.personne.there {
+				background-color: blue;
+				border: 1px solid blue;
+			}
+
+
+
+
+	/** RDC **/
+	#rdc-zone1, #rdc-zone2, #rdc-zone3
+	{
+		height: 300px;
+		width: 100%;
+	}
+
+	#patio {
+		position: absolute;
+		top: 300px;
+		left: 230px;
+		width: 725px;
+		height: 300px;
+	}
+
+
+
+
+
+	/** etage **/
+	.bureaux-fond {
+		width: 180px;
+		height: 100%;
+	}
+	.bureau-fond-rue {
+
+
+	}
+	.bureau-fond-parking {
+		position: absolute;
+		top: 0;
+		right: 0px;
+	}
+		.bureau-fond {
+			width: 100%;
+			height: 300px;
+			top: 0px;
+			right: 100px;
+		}
+		#bureau-direction {
+			top: 300px;
+			left: 0px;
+		}
+		#bureau-assistant {
+			top: 600px;
+			left: 0px;
+		}
+		#bureau-rh {
+			top: 300px;
+			left: 0px;
+		}
+		#bureau-produit {
+			top: 600px;
+			left: 0px;
+		}
+	.etage-plateau {
+		width: 1000px;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 180px;
+	}
+		#vide-escalier {
+			position: absolute;
+			width: 250px;
+			height: 300px;
+			top: 300px;
+			left: 50px;
+		}
+		#vide-principal {
+			position: absolute;
+			width: 400px;
+			height: 300px;
+			top: 300px;
+			left: 375px;
+		}
+
+		#etage-bureaux1 {
+			left: 50px;
+			bottom: 0px;
+		}
+
+		#etage-bureaux2 {
+			right: 185px;
+			bottom: 0px;
+		}
+
+		#etage-bureaux3 {
+			top: 0px;
+			left: 50px;
+		}
+
+		#etage-bureaux4 {
+			top: 0px;
+			left: 250px;
+		}
+
+		#etage-bureaux5 {
+			top: 0px;
+			left: 450px;
+		}
+
+		#etage-bureaux6 {
+			top: 0px;
+			left: 650px;
+		}
+
+		#etage-bureaux7 {
+			bottom: 0px;
+			left: 525px;
+		}
+
+		#etage-sanitaires {
+			width: 275px;
+			height: 255px;
+			position: absolute;
+			bottom: 0px;
+			left: 250px;
+		}
