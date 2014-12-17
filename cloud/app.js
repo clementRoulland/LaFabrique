@@ -21,7 +21,7 @@ app.use(parseExpressCookieSession({
   }
 }));
 
-app.get('/', authentication, function(res, res){
+app.get('/', function(res, res){
 	res.render('index', {
 		user: Parse.User.current(),
 	});
