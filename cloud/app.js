@@ -21,13 +21,13 @@ app.use(parseExpressCookieSession({
   }
 }));
 
-app.get('/', function(res, res){
+app.get('/', authentication, function(res, res){
 	res.render('index', {
 		user: Parse.User.current(),
 	});
 });
 
-//app.use('/api/project', require('cloud/controllers/project'));
+app.use('/api/desktop_group', require('cloud/controllers/desktop_group'));
 app.use('/user', require('cloud/controllers/user'));
 
 app.use(function(req, res){
