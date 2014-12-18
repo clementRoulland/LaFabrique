@@ -50,13 +50,8 @@ div.selection:hover {
 	position: relative;
 }
 
-.zone-six-bureaux {
+.groupe-bureaux {
 	width: 160px;
-	height: 255px;
-	position: absolute;
-}
-.zone-trois-bureaux {		
-	width: 80px;
 	height: 255px;
 	position: absolute;
 }
@@ -65,17 +60,13 @@ div.selection:hover {
 	width: 80px;
 	float: left;
 }
-.zone-six-bureaux .poste-travail:nth-child(odd) .bureau,
-.zone-six-bureaux .poste-travail:nth-child(odd) .chaise {
+.groupe-bureaux .poste-travail:nth-child(odd) .bureau,
+.groupe-bureaux .poste-travail:nth-child(odd) .chaise {
 	float: left;
 }
-.zone-six-bureaux .poste-travail:nth-child(even) .bureau,
-.zone-six-bureaux .poste-travail:nth-child(even) .chaise {
+.groupe-bureaux .poste-travail:nth-child(even) .bureau,
+.groupe-bureaux .poste-travail:nth-child(even) .chaise {
 	float: right;
-}
-.zone-trois-bureaux .bureau, 
-.zone-trois-bureaux .chaise {
-	float: left;
 }
 .bureau {
 	border: 1px solid #eee;
@@ -376,6 +367,12 @@ div.selection:hover {
 #ilot-etage-7 {
 	bottom: 0px;
 	left: 525px;
+	width: 80px;
+	height: 255px;
+}
+#ilot-etage-7 .poste-travail .bureau,
+#ilot-etage-7 .poste-travail .chaise {
+	float: right; 
 }
 
 #etage-sanitaires {

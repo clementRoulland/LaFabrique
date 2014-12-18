@@ -11,7 +11,7 @@
 	</div>
 	<div class="etage-plateau">
 
-		<div ng-repeat="group in vm.groups" class="zone-six-bureaux" id="{{group.name}}">
+		<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
 			<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
 				<div class="chaise selection">
 					<div class="personne empty" my-qtip="" style="color: green; display: inline-block;" skin="green" qtip-content="Nom prénom" data-hasqtip="1"></div>
@@ -19,6 +19,7 @@
 				<div class="bureau selection"></div>
 			</div>
 		</div>
+
 
 		<div id="etage-sanitaires" class="cadre-gauche cadre-droite cadre-haut">
 		</div>
