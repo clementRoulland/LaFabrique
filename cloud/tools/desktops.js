@@ -232,6 +232,24 @@ module.exports = [
 	},
 	{
 		'zone': 'rdc',
+		'name': 'ilot-rdc-4',
+		'desktops': [
+			{
+				'name': 'rdc-4-1',
+			},
+			{
+				'name': 'rdc-4-2',
+			},
+			{
+				'name': 'rdc-4-3',
+			},
+			{
+				'name': 'rdc-4-4',
+			},
+		],
+	},
+	{
+		'zone': 'rdc',
 		'name': 'ilot-rdc-5',
 		'desktops': [
 			{
