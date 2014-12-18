@@ -1,5 +1,31 @@
-<div class="zone cadre" ng-init="vm.loadGroups('rdc')">
-
+<div class="zone cadre rdc-plateau" ng-init="vm.loadGroups('rdc')">
+	<div id="rdc-zone1">
+		<div id="bureau-commerce" class="selection cadre-gauche">
+		</div>
+	</div>
+	<div id="rdc-zone2">
+		<div id="a4" class="selection cadre-haut cadre-droite cadre-bas">
+		</div>
+		<div id="bureau-marketing" class="selection cadre-haut cadre-gauche">
+		</div>
+	</div>
+	<div id="rdc-zone3">
+		<div id="zone-angle">
+		</div>
+		<div id="rdc-sanitaires" class="inaccessible cadre-gauche cadre-droite cadre-haut">
+		</div>
+		<div id="rdc-cafe" class="inaccessible cadre-gauche cadre-haut cadre-droite">
+		</div>
+		<div id="a8" class="selection cadre-droite cadre-haut">
+		</div>
+		<div id="imprimante" class="inaccessible cadre-gauche cadre-haut cadre-droite">
+		</div>
+		<div id="bureau-tag" class="selection cadre-haut">
+		</div>
+	</div>
+	<div id="patio" class="cadre-haut cadre-gauche">
+		<div id="patio-cercle"></div>
+	</div>
 	<div ng-repeat="group in vm.groups" class="zone-six-bureaux" id="{{group.name}}">
 		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
 			<div class="chaise selection">
@@ -8,29 +34,4 @@
 			<div class="bureau selection"></div>
 		</div>
 	</div>
-	
-	<div id="rdc-zone1">
-		<div id="bureau-commerce" class="selection cadre-gauche">
-		</div>
-	</div>
-	<div id="rdc-zone2">
-		<div id="a4" class="selection cadre-haut cadre-droite cadre-bas"></div>
-		<div id="bureau-marketing" class="selection cadre-haut cadre-gauche">
-		</div>
-	</div>
-	<div id="rdc-zone3">
-		<div id="zone-angle">
-		</div>
-		<div id="rdc-sanitaires" class="cadre-gauche cadre-droite cadre-haut">
-		</div>
-		<div id="rdc-cafe" class="cadre-gauche cadre-haut cadre-droite">
-		</div>
-		<div id="a8" class="selection cadre-droite cadre-haut">
-		</div>
-		<div id="imprimante" class="cadre-gauche cadre-haut cadre-droite">
-		</div>
-		<div id="bureau-tag" class="selection cadre-haut">
-		</div>
-	</div>
-	<div id="patio" class="cadre-haut cadre-gauche"></div>
 </div>

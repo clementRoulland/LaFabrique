@@ -1,5 +1,5 @@
 /** COLORS
-parquet : #C2C2A3
+parquet : #D8AD7D
 moquette verte : #2EB82E
 moquette rouge : #CC0000
 bordures : #eee
@@ -28,6 +28,10 @@ salles inaccessibles : #eee
 }
 .cadre-gauche {
 	border-left: 1px solid #eee;
+}
+
+.inaccessible {
+	background-color: #eee;
 }
 
 div.selection:hover {
@@ -150,11 +154,10 @@ div.selection:hover {
 	right: 0px;
 }
 #rdc-sanitaires {
-	width: 225px;
+	width: 165px;
 	height: 100%;
 	position: relative;
-	left: 218px;
-	background-color: #eee;
+	left: 260px;
 }
 #bureau-tag {
 	position: absolute;
@@ -191,18 +194,74 @@ div.selection:hover {
 	right: 180px;
 	width: 800px;
 	height: 300px;
+	background-color: #2EB82E;
 }
 
+#patio-cercle {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	margin: 5px;
+	position: absolute;
+	top: 48px;
+	right: 110px;
+	background-color: #D8AD7D;
+	border: 1px solid #eee;
+}
+
+.rdc-plateau {
+	background-color: #D8AD7D;
+	/*background: url("../img/parquet.png") repeat;*/
+}
+#ilot-rdc-1 {
+	left: 26px;
+	bottom: 0px;
+}
+
+#ilot-rdc-2 {
+	right: 262px;
+	bottom: 0px;
+}
+
+#ilot-rdc-3 {
+	bottom: 0px;
+	right: 51px;
+}
+
+#ilot-rdc-4 {
+	top: 46px;
+	left: 0px;
+}
+
+#ilot-rdc-5 {
+	top: 46px;
+	left: 218px;
+}
+
+#ilot-rdc-6 {
+	top: 46px;
+	left: 390px;
+}
+
+#ilot-rdc-7 {
+	top: 46px;
+	left: 610px;
+}
+
+#ilot-rdc-8 {
+	top: 46px;
+	left: 783px;
+}
 
 
 /** etage **/
 .bureaux-fond {
 	width: 180px;
 	height: 100%;
-	background-color: #C2C2A3;
+	background-color: #D8AD7D;
 }
 .bureau-fond-rue {
-	background-color: #C2C2A3;
+	background-color: #D8AD7D;
 }
 .bureau-fond-parking {
 	position: absolute;
@@ -257,7 +316,7 @@ div.selection:hover {
 	position: absolute;
 	top: 0px;
 	left: 180px;
-	background-color: #C2C2A3;
+	background-color: #D8AD7D;
 }
 #etage-moquette {
 	background-color: #2EB82E; 
