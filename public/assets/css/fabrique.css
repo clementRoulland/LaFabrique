@@ -261,12 +261,21 @@ div.selection:hover {
 }
 
 #ilot-rdc-commerce {
-	top: 46px;
+	top: 100px;
 	right: 50px;
 	width: 80px;
 	height: 255px;
 }
 
+#ilot-rdc-marketing {
+	top: 405px;
+	right: 50px;
+	width: 80px;
+	height: 255px;
+}
+
+#ilot-rdc-marketing .poste-travail .bureau,
+#ilot-rdc-marketing .poste-travail .chaise,
 #ilot-rdc-commerce .poste-travail .bureau,
 #ilot-rdc-commerce .poste-travail .chaise {
 	float: right; 
@@ -308,7 +317,7 @@ div.selection:hover {
 	top: 600px;
 	left: 0px;
 	width: 180px;
-	height: 199px;
+	height: 300px;
 	border-right: 1px solid #eee;
 	border-top: 1px solid #eee;
 }
@@ -335,7 +344,7 @@ div.selection:hover {
 	right: 0;
 	top: 600px;
 	width: 180px;
-	height: 300px;
+	height: 199px;
 	border-left: 1px solid #eee;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
@@ -416,9 +425,48 @@ div.selection:hover {
 	width: 80px;
 	height: 255px;
 }
+
+#ilot-etage-direction {
+	top: 405px;
+	left: 50px;
+	width: 80px;
+	height: 255px;
+}
+
+#ilot-etage-assistant {
+	top: 100px;
+	left: 50px;
+	width: 80px;
+	height: 255px;
+}
+#ilot-etage-produit {
+	top: 155px;
+	right: 50px;
+	width: 80px;
+	height: 255px;
+}
+
+#ilot-etage-rh {
+	top: 405px;
+	right: 50px;
+	width: 80px;
+	height: 255px;
+}
+
+#ilot-etage-produit .poste-travail .bureau,
+#ilot-etage-produit .poste-travail .chaise,
+#ilot-etage-rh .poste-travail .bureau,
+#ilot-etage-rh .poste-travail .chaise,
 #ilot-etage-7 .poste-travail .bureau,
 #ilot-etage-7 .poste-travail .chaise {
 	float: right; 
+}
+
+#ilot-etage-direction .poste-travail .bureau,
+#ilot-etage-direction .poste-travail .chaise,
+#ilot-etage-assistant .poste-travail .bureau,
+#ilot-etage-assistant .poste-travail .chaise{
+	float: left; 
 }
 
 #etage-sanitaires {
