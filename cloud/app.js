@@ -1,4 +1,3 @@
-
 // These two lines are required to initialize Express in Cloud Code.
 var express = require('express');
 var app = express();
@@ -14,24 +13,25 @@ app.use(express.bodyParser());    // Middleware for reading request
 app.use(express.methodOverride());
 app.use(express.cookieParser('D!g!tal&o_T0t&ms'));
 app.use(parseExpressCookieSession({
-  fetchUser: true,
-  key: 'image.sess',
-  cookie: {
-    maxAge: 3600000 * 24 * 30
-  }
+    fetchUser: true,
+    key: 'image.sess',
+    cookie: {
+        maxAge: 3600000 * 24 * 30
+    }
 }));
 
-app.get('/', authentication, function(res, res){
-	res.render('index', {
-		user: Parse.User.current(),
-	});
+app.get('/', authentication, function (res, res) {
+    res.render('index', {
+        user: Parse.User.current()
+    });
 });
 
 app.use('/api/desktop_group', require('cloud/controllers/desktop_group'));
 app.use('/api/init', require('cloud/controllers/init'));
+app.use('/api/room', require('cloud/controllers/room'));
 app.use('/user', require('cloud/controllers/user'));
 
-app.use(function(req, res){
+app.use(function (req, res) {
     res.redirect('/');
 });
 

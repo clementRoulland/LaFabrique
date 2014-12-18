@@ -12,31 +12,23 @@
 
 <div class="zone cadre" id="etage" ng-init="vm.loadGroups('etage')">
 	<div class="bureaux-fond cadre-droite">
-		<div class="bureau-fond cadre-bas selection" id="bureau-assistant">
+		<div class="bureau-fond cadre-bas" id="bureau-assistant">
 		</div>
 
-		<div class="bureau-fond bureau-fond-rue selection" id="bureau-direction">
+		<div class="bureau-fond bureau-fond-rue" id="bureau-direction">
 		</div>
 
 		<div class="bureau-fond cadre-haut selection" id="a10">
 		</div>
 	</div>
 	<div class="etage-plateau">
-
-		<div ng-repeat="group in vm.groups" class="zone-six-bureaux" id="{{group.name}}">
-			<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
-				<div class="chaise selection"><div class="personne empty"></div></div>
-				<div class="bureau selection"></div>
-			</div>
-		</div>
-
-		<div id="etage-sanitaires" class="cadre-gauche cadre-droite cadre-haut">
+		<div id="etage-sanitaires" class="inaccessible cadre-gauche cadre-droite cadre-haut">
 		</div>
 
 		<div id="etage-moquette"></div>
-		<div id="vide-escalier" class="cadre">
+		<div id="vide-escalier" class="inaccessible cadre">
 		</div>
-		<div id="vide-principal" class="cadre">
+		<div id="vide-principal" class="inaccessible cadre">
 			<div ng-drag="true" ng-drag-data="vm.users" class="ng-binding" draggable="false"> one </div>
 		</div>
 	</div>
@@ -45,15 +37,25 @@
 		<div class="bureau-fond cadre-bas selection" id="a2">
 		</div>
 
-		<div class="bureau-fond cadre-bas selection" id="bureau-produit">
+		<div class="bureau-fond cadre-bas" id="bureau-produit">
 		</div>
 
-		<div class="bureau-fond cadre-bas selection" id="bureau-rh">
+		<div class="bureau-fond cadre-bas" id="bureau-rh">
 		</div>
 		
 		<div class="bureau-fond cadre-bas selection" id="a8up">
 		</div>
 
-		<div class="bureau-fond" id="salle-detente"></div>
+		<div class="bureau-fond inaccessible" id="salle-detente"></div>
 	</div>
+
+	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
+			<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
+				<div class="chaise">
+					<div class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" qtip-content="Nom prénom" data-hasqtip="1"></div>
+				</div>
+				<div class="bureau selection"></div>
+			</div>
+		</div>
+
 </div>
