@@ -301,7 +301,6 @@ div.selection:hover {
 
 #a2 {
 	top: 0px;
-	background-color: #CC0000;
 	height: 100px; 
 }
 #bureau-produit {
@@ -335,9 +334,9 @@ div.selection:hover {
 	background-color: #66AD00;
 	/*background: url("../img/grass.jpg") repeat;*/
 	width: 839px;
-	height: 394px;
+	height: 388px;
 	position: absolute;
-	top: 250px;
+	top: 255px;
 	left: 0px;
 }
 #vide-escalier {
@@ -356,38 +355,39 @@ div.selection:hover {
 }
 
 #ilot-etage-1 {
-	left: 50px;
+	left: 230px;
 	bottom: 0px;
 }
 
 #ilot-etage-2 {
-	right: 185px;
+	right: 215px;
 	bottom: 0px;
 }
 
 #ilot-etage-3 {
 	top: 0px;
-	left: 50px;
+	left: 230px;
 }
 
 #ilot-etage-4 {
 	top: 0px;
-	left: 250px;
+	left: 430px;
 }
 
 #ilot-etage-5 {
 	top: 0px;
-	left: 450px;
+	left: 630px;
 }
 
 #ilot-etage-6 {
 	top: 0px;
-	left: 650px;
+	left: 830px;
 }
+
 
 #ilot-etage-7 {
 	bottom: 0px;
-	left: 525px;
+	left: 705px;
 	width: 80px;
 	height: 255px;
 }

@@ -10,7 +10,7 @@
 		</div>
 		<div id="rdc-cafe" class="inaccessible cadre-gauche cadre-haut cadre-droite">
 		</div>
-		<div id="a8" class="selection cadre-droite cadre-haut">
+		<div id="a8" class="selection cadre-droite cadre-haut">			
 		</div>
 		<div id="imprimante" class="inaccessible cadre-gauche cadre-haut cadre-droite">
 		</div>
@@ -21,17 +21,17 @@
 	<div id="patio" class="cadre-haut cadre-gauche">
 		<div id="patio-cercle"></div>
 	</div>
-	<div id="bureau-commerce" class="selection cadre-gauche">
+	<div id="bureau-commerce" class="cadre-gauche">
 	</div>
 	<div id="a4" class="selection cadre-haut cadre-droite cadre-bas">
 	</div>
-	<div id="bureau-marketing" class="selection cadre-haut cadre-gauche">
+	<div id="bureau-marketing" class="cadre-haut cadre-gauche">
 	</div>
 
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
 		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
-			<div class="chaise selection">
-				<div class="personne empty" my-qtip="" style="color: green; display: inline-block;" skin="green" qtip-content="Nom prénom" data-hasqtip="1"></div>
+			<div class="chaise">
+				<div class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" qtip-content="Nom prénom" data-hasqtip="1"></div>
 			</div>
 			<div class="bureau selection"></div>
 		</div>
