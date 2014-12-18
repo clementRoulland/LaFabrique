@@ -1,15 +1,9 @@
 <div class="zone cadre rdc-plateau" ng-init="vm.loadGroups('rdc')">
 	<div id="rdc-zone1">
-		<div id="bureau-commerce" class="selection cadre-gauche">
-		</div>
 	</div>
 	<div id="rdc-zone2">
-		<div id="a4" class="selection cadre-haut cadre-droite cadre-bas">
-		</div>
-		<div id="bureau-marketing" class="selection cadre-haut cadre-gauche">
-		</div>
 	</div>
-	<div id="rdc-zone3">
+	<div id="rdc-zone-bas">
 		<div id="zone-angle">
 		</div>
 		<div id="rdc-sanitaires" class="inaccessible cadre-gauche cadre-droite cadre-haut">
@@ -20,12 +14,18 @@
 		</div>
 		<div id="imprimante" class="inaccessible cadre-gauche cadre-haut cadre-droite">
 		</div>
-		<div id="bureau-tag" class="selection cadre-haut">
+		<div id="bureau-tag" class="cadre-haut">
 		</div>
 	</div>
 
 	<div id="patio" class="cadre-haut cadre-gauche">
 		<div id="patio-cercle"></div>
+	</div>
+	<div id="bureau-commerce" class="selection cadre-gauche">
+	</div>
+	<div id="a4" class="selection cadre-haut cadre-droite cadre-bas">
+	</div>
+	<div id="bureau-marketing" class="selection cadre-haut cadre-gauche">
 	</div>
 
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
