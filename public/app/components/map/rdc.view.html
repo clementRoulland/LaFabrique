@@ -1,4 +1,12 @@
-<div class="zone cadre">
+<div class="zone cadre" ng-init="vm.loadGroups('rdc')">
+
+	<div ng-repeat="group in vm.groups" class="zone-six-bureaux" id="{{group.name}}">
+		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
+			<div class="chaise selection"><div class="personne empty"></div></div>
+			<div class="bureau selection"></div>
+		</div>
+	</div>
+	
 	<div id="rdc-zone1">
 		<div id="bureau-commerce" class="selection cadre-gauche">
 		</div>

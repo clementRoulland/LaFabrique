@@ -7,10 +7,8 @@ module.exports = function(){
 
 	app.get('/', authentication, getAll);
 	app.get('/zone/:zone', authentication, getByZone);
-	app.get('/generateAllDesktops', authentication, generateAllDesktops);
-	app.get('/clearAllDesktops', authentication, clearAllDesktops);
 
-	function getAll(res, res){
+	function getAll(res, req){
 		var query = new Parse.Query(DesktopGroup);
 		query.include("desktops.user");
 		query.include("desktops.phone");
@@ -27,7 +25,7 @@ module.exports = function(){
 		});
 	};
 
-	function getByZone(res, res){
+	function getByZone(req, res){
 		var zone = req.params.zone;
 		var query = new Parse.Query(DesktopGroup);
 		query.equalTo('zone', zone);
@@ -45,49 +43,6 @@ module.exports = function(){
 			error: error
 		});
 	};
-
-	function generateAllDesktops(res, req){
-		var desktopGroups = require('cloud/tools/desktops');
-		var query = new Parse.Query(DesktopGroup);
-
-		console.log(desktopGroups);
-		desktopGroups.forEach(function(desktopGroupJSON){
-			var parseDesktopGroup = new DesktopGroup();
-			parseDesktopGroup.set('name', desktopGroupJSON.name);
-			parseDesktopGroup.set('zone', desktopGroupJSON.zone);
-			var desktops = new Array();
-
-			desktopGroupJSON.desktops.forEach(function(desktopJSON){
-				var parseDesktop = new Desktop();
-				parseDesktop.set('name', desktopJSON.name);
-				desktops.push(parseDesktop);
-			});
-
-			parseDesktopGroup.set('desktops', desktops);
-			parseDesktopGroup.save();
-		});
-
-	}
-
-	function clearAllDesktops(res, req){
-
-		var query = new Parse.Query(DesktopGroup);
-		query.include("desktops.user");
-		query.include("desktops.phone");
-		query.find({
-			success: function(results) {
-				results.forEach(function(itDesktopGroup){
-					itDesktopGroup.get('desktops').forEach(function(itDesktop){
-						var parseDesktop = new Desktop();
-						itDesktop.destroy();
-					});
-					itDesktopGroup.destroy();
-				});
-			},
-			error: error
-		});
-
-	}
 
 	function toJSON(desktopGroup){
 		return {
