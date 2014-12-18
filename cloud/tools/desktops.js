@@ -159,6 +159,42 @@ module.exports = [
 		],
 	},
 	{
+		'zone': 'etage',
+		'name': 'ilot-etage-direction',
+		'desktops': [
+			{
+				'name': 'etage-direction-1',
+			},
+		],
+	},
+	{
+		'zone': 'etage',
+		'name': 'ilot-etage-assistant',
+		'desktops': [
+			{
+				'name': 'etage-assistant-1',
+			},
+		],
+	},
+	{
+		'zone': 'etage',
+		'name': 'ilot-etage-produit',
+		'desktops': [
+			{
+				'name': 'etage-produit-1',
+			},
+		],
+	},
+	{
+		'zone': 'etage',
+		'name': 'ilot-etage-rh',
+		'desktops': [
+			{
+				'name': 'etage-rh-1',
+			},
+		],
+	},
+	{
 		'zone': 'rdc',
 		'name': 'ilot-rdc-1',
 		'desktops': [
@@ -341,6 +377,24 @@ module.exports = [
 			},
 			{
 				'name': 'rdc-8-6',
+			},
+		],
+	},
+	{
+		'zone': 'rdc',
+		'name': 'ilot-rdc-commerce',
+		'desktops': [
+			{
+				'name': 'rdc-commerce-1',
+			},
+		],
+	},
+	{
+		'zone': 'rdc',
+		'name': 'ilot-rdc-marketing',
+		'desktops': [
+			{
+				'name': 'rdc-marketing-1',
 			},
 		],
 	},
