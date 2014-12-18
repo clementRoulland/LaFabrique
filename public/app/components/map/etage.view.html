@@ -27,7 +27,7 @@
 		<div id="etage-moquette"></div>
 		<div id="vide-escalier" class="inaccessible cadre">
 		</div>
-		<div id="vide-principal" class="inaccessible cadre">
+		<div id="vide-principal" class="inaccessible cadre" ng-drop="true" ng-drop-success="vm.onDropToNil($data,$event)">
 			<div ng-repeat="user in vm.users" ng-drag="true" ng-drag-data="user" draggable="false" class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-content="{{user.fullname}}" >
 				<!--<span style="display: none;">Nom Prénom</span>-->
 			</div>
@@ -56,8 +56,11 @@
 
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
 		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
-			<div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropComplete($data,$event,desktop)">
+			<div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropToDesk($data,$event,desktop)">
 				<div class="chaise"></div>
+				<div ng-show="desktop.user" ng-drag="true" ng-drag-data="desktop.user" draggable="false" class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-content="{{desktop.user.fullname}}"  ng-drag-success="vm.onDragFromDesk($data,$event,desktop)">
+				<!--<span style="display: none;">Nom Prénom</span>-->
+			</div>
 			</div>
 			<div class="bureau selection"></div>
 		</div>

@@ -9,18 +9,32 @@
 
     function MapController(MapFactory, RoomFactory, UserFactory) {
         var vm = this;
-        vm.loadGroups = loadGroups;
-        vm.loadRooms = loadRooms;
-        vm.loadUsers = loadUsers;
 
-        vm.onDropComplete=function(data,evt,desktop){
-            console.log('onDropComplete on desktop ' + desktop.name);
+        vm.loadGroups       = loadGroups;
+        vm.loadRooms        = loadRooms;
+        vm.loadUsers        = loadUsers;
+        vm.onDropToDesk     = onDropToDesk;
+        vm.onDragFromDesk   = onDragFromDesk;
+        vm.onDropToNil      = onDropToNil;
+
+
+        function onDropToDesk(data,evt,desktop){
+            desktop.user = data;
+            var index = vm.users.indexOf(data);
+            vm.users.splice(index, 1);  
+            console.log('onDropToDesk  ' + desktop.name);
             console.log(data);
         }
-        vm.onDragSuccess=function(data,evt){
-            console.log('onDragSuccess1');
+
+        function onDragFromDesk(data,evt,desktop){
+            vm.users.push(desktop.user);
+            desktop.user = undefined;
+            console.log('onDragFromDesk');
         }
-  
+
+        function onDropToNil(data,evt){
+            console.log('onDropToNil');
+        }
 
         function loadGroups(zone) {
             MapFactory.getDesktopGroupsByZone(zone)
