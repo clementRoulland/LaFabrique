@@ -275,9 +275,9 @@ div.selection:hover {
 }
 
 #ilot-rdc-marketing .poste-travail .bureau,
-#ilot-rdc-marketing .poste-travail .chaise,
+#ilot-rdc-marketing .poste-travail .zone-chaise,
 #ilot-rdc-commerce .poste-travail .bureau,
-#ilot-rdc-commerce .poste-travail .chaise {
+#ilot-rdc-commerce .poste-travail .zone-chaise {
 	float: right; 
 }
 
@@ -454,18 +454,18 @@ div.selection:hover {
 }
 
 #ilot-etage-produit .poste-travail .bureau,
-#ilot-etage-produit .poste-travail .chaise,
+#ilot-etage-produit .poste-travail .zone-chaise,
 #ilot-etage-rh .poste-travail .bureau,
-#ilot-etage-rh .poste-travail .chaise,
+#ilot-etage-rh .poste-travail .zone-chaise,
 #ilot-etage-7 .poste-travail .bureau,
-#ilot-etage-7 .poste-travail .chaise {
+#ilot-etage-7 .poste-travail .zone-chaise {
 	float: right; 
 }
 
 #ilot-etage-direction .poste-travail .bureau,
-#ilot-etage-direction .poste-travail .chaise,
+#ilot-etage-direction .poste-travail .zone-chaise,
 #ilot-etage-assistant .poste-travail .bureau,
-#ilot-etage-assistant .poste-travail .chaise{
+#ilot-etage-assistant .poste-travail .zone-chaise{
 	float: left; 
 }
 
