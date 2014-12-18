@@ -4,24 +4,29 @@ module.exports = function(){
 	var DesktopGroup = Parse.Object.extend('DesktopGroup');
 	var Desktop 	 = Parse.Object.extend('Desktop');
 	var Room 	 	 = Parse.Object.extend('Room');
+	var User 	 	 = Parse.User;
 	var authentication = require('cloud/tools/require-user.js');
 
-	app.get('/load', authentication, load);
-	app.get('/clear', authentication, clear);
+	app.get('/load', load);
+	app.get('/clear', clear);
 
 	function load(req, res){
-		loadDesktops();
+		loadUsers();
 		loadRooms();
+		loadDesktops();
 	}
 
 	function clear(req, res){
 		clearDesktops();
 		clearDesktopGroups();
 		clearRooms();
+		clearUsers();
 	}
 
 	function loadDesktops(){
+		console.log('loadDesktops');
 		var desktopGroups = require('cloud/tools/desktops');
+		console.log(desktopGroups);
 		desktopGroups.forEach(function(desktopGroupJSON){
 			var parseDesktopGroup = new DesktopGroup();
 			parseDesktopGroup.set('name', desktopGroupJSON.name);
@@ -40,13 +45,34 @@ module.exports = function(){
 	}
 
 	function loadRooms(){
-		var desktopGroups = require('cloud/tools/rooms');
-		desktopGroups.forEach(function(roomJSON){
+		console.log('loadRooms');
+		var rooms = require('cloud/tools/rooms');
+		console.log(rooms);
+		rooms.forEach(function(roomJSON){
 			var roomParse = new Room();
 			roomParse.set('name', roomJSON.name);
 			roomParse.set('idGoogle', roomJSON.idGoogle);
 			roomParse.set('idHtml', roomJSON.idHtml);
 			roomParse.save();
+		});
+	}
+
+	function loadUsers(){
+		console.log('loadUsers');
+		var users = require('cloud/tools/users');
+		console.log(users);
+		users.forEach(function(userJSON){
+			var userParse = new User();
+
+			userParse.setUsername(userJSON.email.split("@")[0]);
+			userParse.setPassword(userJSON.email.split("@")[0]);
+			userParse.setEmail(userJSON.email);
+
+			userParse.set('firstname', userJSON.firstName);
+			userParse.set('lastname', userJSON.lastName);
+			userParse.set('fullname', userJSON.firstName + " " + userJSON.lastName);
+
+			userParse.save();
 		});
 	}
 
@@ -61,6 +87,7 @@ module.exports = function(){
 			error: error
 		});
 	}
+
 	function clearDesktops(){
 		var query = new Parse.Query(Desktop);
 		query.find({
@@ -72,6 +99,7 @@ module.exports = function(){
 			error: error
 		});
 	}
+
 	function clearRooms(){
 		var query = new Parse.Query(Room);
 		query.find({
@@ -84,12 +112,18 @@ module.exports = function(){
 		});
 	}
 
-	function toJSON(desktopGroup){
-		return {
-			objectId: desktopGroup.id,
-			name: desktopGroup.get('name'),
-			desktops: desktopGroup.get('desktops'),
-		};
+	function clearUsers(){
+		var query = new Parse.Query(User);
+		query.find({
+			success: function(results) {
+				results.forEach(function(itUser){
+					if(itUser.getUsername() != 'admin'){
+						itUser.destroy();
+					}
+				});
+			},
+			error: error
+		});
 	}
 
 	function error(object, error) {

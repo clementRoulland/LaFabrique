@@ -2,6 +2,6 @@
 	'use strict';
 
 	angular
-	.module('LaFabriqueApp', ['ui.router']);
+	.module('LaFabriqueApp', ['ui.router', 'ngDraggable']);
 
 })();

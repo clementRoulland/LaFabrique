@@ -1,3 +1,15 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		Étage
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="/"><i class="fa fa-dashboard"></i> Plan</a></li>
+		<li class="active">Étage</li>
+	</ol>
+</section>
+
 <div class="zone cadre" id="etage" ng-init="vm.loadGroups('etage')">
 	<div class="bureaux-fond cadre-droite">
 		<div class="bureau-fond cadre-bas selection" id="bureau-assistant">
@@ -25,6 +37,7 @@
 		<div id="vide-escalier" class="cadre">
 		</div>
 		<div id="vide-principal" class="cadre">
+			<div ng-drag="true" ng-drag-data="vm.users" class="ng-binding" draggable="false"> one </div>
 		</div>
 	</div>
 
