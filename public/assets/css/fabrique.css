@@ -1,21 +1,33 @@
+/** COLORS
+parquet : #C2C2A3
+moquette verte : #2EB82E
+moquette rouge : #CC0000
+bordures : #eee
+salles inaccessibles : #eee
+
+
+
+**/
+
+
 * {
 	box-sizing: border-box;
 }
 
 .cadre {
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 }
 .cadre-haut {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #eee;
 }
 .cadre-bas {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #eee;
 }
 .cadre-droite {
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #eee;
 }
 .cadre-gauche {
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #eee;
 }
 
 div.selection:hover {
@@ -62,26 +74,28 @@ div.selection:hover {
 	float: left;
 }
 .bureau {
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 	width: 40px;
 	height: 85px;
+	background-color: white;
 }
 .chaise {
 	width: 40px;
 	height: 85px;
 	position: relative;
+	background-color: white;
 }
 .personne {
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 	margin: 5px;
 	position: absolute;
 	top: 25px;
 }
 .personne.away {
-	background-color: #ccc;
+	background-color: #eee;
 }
 .personne.there {
 	background-color: blue;
@@ -140,6 +154,7 @@ div.selection:hover {
 	height: 100%;
 	position: relative;
 	left: 218px;
+	background-color: #eee;
 }
 #bureau-tag {
 	position: absolute;
@@ -184,10 +199,10 @@ div.selection:hover {
 .bureaux-fond {
 	width: 180px;
 	height: 100%;
+	background-color: #C2C2A3;
 }
 .bureau-fond-rue {
-
-
+	background-color: #C2C2A3;
 }
 .bureau-fond-parking {
 	position: absolute;
@@ -200,21 +215,41 @@ div.selection:hover {
 	top: 0px;
 	right: 100px;
 }
+#bureau-assistant {
+	top: 0;
+	left: 0px;
+}
 #bureau-direction {
 	top: 300px;
 	left: 0px;
 }
-#bureau-assistant {
+#a10 {
 	top: 600px;
 	left: 0px;
+}
+
+#a2 {
+	top: 0px;
+	background-color: #CC0000;
+	height: 100px; 
+}
+#bureau-produit {
+	top: 100px;
+	left: 0px;
+	height: 200px;
 }
 #bureau-rh {
 	top: 300px;
 	left: 0px;
 }
-#bureau-produit {
+#a8up {
 	top: 600px;
-	left: 0px;
+	height: 200px;
+}
+#salle-detente {
+	top: 800px;
+	height: 99px;
+	background-color: #CC0000;
 }
 .etage-plateau {
 	width: 1000px;
@@ -222,8 +257,18 @@ div.selection:hover {
 	position: absolute;
 	top: 0px;
 	left: 180px;
+	background-color: #C2C2A3;
+}
+#etage-moquette {
+	background-color: #2EB82E; 
+	width: 839px;
+	height: 394px;
+	position: absolute;
+	top: 250px;
+	left: 0px;
 }
 #vide-escalier {
+	background-color: white;
 	position: absolute;
 	width: 250px;
 	height: 300px;
@@ -231,6 +276,7 @@ div.selection:hover {
 	left: 50px;
 }
 #vide-principal {
+	background-color: white;
 	position: absolute;
 	width: 400px;
 	height: 300px;
@@ -279,4 +325,5 @@ div.selection:hover {
 	position: absolute;
 	bottom: 0px;
 	left: 250px;
+	background-color: #eee;
 }
