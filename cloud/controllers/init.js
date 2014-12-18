@@ -53,6 +53,7 @@ module.exports = function(){
 			roomParse.set('name', roomJSON.name);
 			roomParse.set('idGoogle', roomJSON.idGoogle);
 			roomParse.set('idHtml', roomJSON.idHtml);
+			roomParse.set('zone', roomJSON.zone);
 			roomParse.save();
 		});
 	}
