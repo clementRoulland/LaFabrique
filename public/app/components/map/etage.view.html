@@ -17,7 +17,7 @@
 		<div class="bureau-fond bureau-fond-rue" id="bureau-direction">
 		</div>
 
-		<div class="bureau-fond cadre-haut selection" id="a10">
+		<div id="a10up">
 		</div>
 	</div>
 	<div class="etage-plateau">
@@ -33,20 +33,24 @@
 	</div>
 
 	<div class="bureaux-fond bureau-fond-parking cadre-gauche">
-		<div class="bureau-fond cadre-bas selection" id="a2">
+		<div id="a2up">
 		</div>
-
 		<div class="bureau-fond cadre-bas" id="bureau-produit">
 		</div>
 
-		<div class="bureau-fond cadre-bas" id="bureau-rh">
-		</div>
-		
-		<div class="bureau-fond cadre-bas selection" id="a8up">
+		<div class="bureau-fond" id="bureau-rh">
 		</div>
 
+		<div id="a8up">
+		</div>
+		
 		<div class="bureau-fond inaccessible" id="salle-detente"></div>
 	</div>
+
+	<div ng-repeat="room in vm.rooms" ng-show="room.zone=='etage'" class="rooms-bureaux selection" id="{{room.idHtml}}">
+		<div>{{room.name}}</div>
+	</div>
+
 
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
 		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
