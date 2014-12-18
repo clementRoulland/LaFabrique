@@ -29,8 +29,7 @@
                 })
                 .catch();
         }
-
-        vm.rooms = loadRooms;
+        
         function loadRooms() {
             RoomFactory.getRooms()
                 .then(function (data) {
