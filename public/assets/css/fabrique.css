@@ -61,11 +61,11 @@ div.selection:hover {
 	float: left;
 }
 .groupe-bureaux .poste-travail:nth-child(odd) .bureau,
-.groupe-bureaux .poste-travail:nth-child(odd) .chaise {
+.groupe-bureaux .poste-travail:nth-child(odd) .zone-chaise {
 	float: left;
 }
 .groupe-bureaux .poste-travail:nth-child(even) .bureau,
-.groupe-bureaux .poste-travail:nth-child(even) .chaise {
+.groupe-bureaux .poste-travail:nth-child(even) .zone-chaise {
 	float: right;
 }
 .bureau {
@@ -74,13 +74,13 @@ div.selection:hover {
 	height: 85px;
 	background-color: white;
 }
-.chaise {
+.zone-chaise {
 	width: 40px;
 	height: 85px;
 	position: relative;
 	background-color: transarent;
 }
-.personne {
+.chaise, .personne {
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
@@ -89,6 +89,7 @@ div.selection:hover {
 	position: absolute;
 	top: 25px;
 }
+
 .personne.away {
 	background-color: #eee;
 }
@@ -203,7 +204,6 @@ div.selection:hover {
 	right: 110px;
 	background-color: #D8AD7D;
 	/*background: url("../img/parquet.jpg") repeat;*/
-	border: 1px solid #eee;
 }
 
 .rdc-plateau {

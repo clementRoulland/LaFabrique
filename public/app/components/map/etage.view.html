@@ -49,12 +49,15 @@
 	</div>
 
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
-			<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
-				<div class="chaise">
-					<div class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" qtip-content="Nom prénom" data-hasqtip="1"></div>
+		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
+			<div class="zone-chaise">
+				<div class="chaise"></div>
+				<div class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1">
+					<!--<span style="display: none;">Nom Prénom</span>-->
 				</div>
-				<div class="bureau selection"></div>
 			</div>
+			<div class="bureau selection"></div>
 		</div>
+	</div>
 
 </div>
