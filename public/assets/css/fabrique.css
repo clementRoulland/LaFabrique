@@ -482,7 +482,9 @@ div.selection:hover {
 	bottom: 0px;
 	left: 250px;
 }
-#vide-principal .personne {
+#vide-principal .personne,
+#patio .personne,
+.rooms-bureaux .personne {
 	position: relative;
 	float: left;
 	top: 0px;
