@@ -1,4 +1,3 @@
-
 <!-- Content Header (Page header) -->
 <section class="content-header">
 	<h1>
@@ -10,16 +9,7 @@
 	</ol>
 </section>
 
-<div class="zone cadre" ng-init="vm.loadGroups('rdc');vm.loadRooms();">
-
-	<div ng-repeat="group in vm.groups" class="zone-six-bureaux" id="{{group.name}}">
-		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
-			<div class="chaise selection"><div class="personne empty"></div></div>
-			<div class="bureau selection"></div>
-		</div>
-	</div>
-	
-<div class="zone cadre rdc-plateau" ng-init="vm.loadGroups('rdc')">
+<div class="zone cadre rdc-plateau" ng-init="vm.loadGroups('rdc');vm.loadRooms();">
 	<div id="rdc-zone1">
 	</div>
 	<div id="rdc-zone2">
@@ -30,8 +20,6 @@
 		<div id="rdc-sanitaires" class="inaccessible cadre-gauche cadre-droite cadre-haut">
 		</div>
 		<div id="rdc-cafe" class="inaccessible cadre-gauche cadre-haut cadre-droite">
-		</div>
-		<div id="a8" class="selection cadre-droite cadre-haut">			
 		</div>
 		<div id="imprimante" class="inaccessible cadre-gauche cadre-haut cadre-droite">
 		</div>
@@ -44,9 +32,11 @@
 	</div>
 	<div id="bureau-commerce" class="cadre-gauche">
 	</div>
-	<div id="a4" class="selection cadre-haut cadre-droite cadre-bas">
-	</div>
 	<div id="bureau-marketing" class="cadre-haut cadre-gauche">
+	</div>
+
+		<div ng-repeat="room in vm.rooms" ng-show="room.zone=='rdc'" class="rooms-bureaux selection" id="{{room.idHtml}}">
+		<div>{{room.name}}</div>
 	</div>
 
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
@@ -57,4 +47,6 @@
 			<div class="bureau selection"></div>
 		</div>
 	</div>
+
+	
 </div>

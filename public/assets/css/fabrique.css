@@ -50,6 +50,12 @@ div.selection:hover {
 	position: relative;
 }
 
+.rooms-bureaux {
+	width: 160px;
+	height: 255px;
+	position: absolute;
+}
+
 .groupe-bureaux {
 	width: 160px;
 	height: 255px;
@@ -140,6 +146,9 @@ div.selection:hover {
 	height: 180px;
 	position: absolute;
 	top: 350px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
 }
 #bureau-marketing {
 	top:300px;
@@ -170,10 +179,12 @@ div.selection:hover {
 }
 #a8 {
 	position: absolute;
-	top: 0px;
+	top: 600px;
 	right: 475px;
 	height: 200px;
 	width: 100px;
+	border: 1px solid #eee;
+	
 }
 #imprimante {
 	position: absolute;
@@ -294,14 +305,23 @@ div.selection:hover {
 	top: 300px;
 	left: 0px;
 }
-#a10 {
+#a10up {
 	top: 600px;
 	left: 0px;
+	width: 180px;
+	height: 199px;
+	border-right: 1px solid #eee;
+	border-top: 1px solid #eee;
 }
 
-#a2 {
-	top: 0px;
+#a2up {
+	top: 0;
+	right: 0px;
 	height: 100px; 
+	width: 180px;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+
 }
 #bureau-produit {
 	top: 100px;
@@ -313,8 +333,13 @@ div.selection:hover {
 	left: 0px;
 }
 #a8up {
+	right: 0;
 	top: 600px;
-	height: 200px;
+	width: 180px;
+	height: 300px;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 #salle-detente {
 	top: 800px;
