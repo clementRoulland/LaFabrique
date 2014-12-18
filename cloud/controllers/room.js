@@ -28,7 +28,8 @@ module.exports = function () {
             name: room.get('name'),
             zone: room.get('zone'),
             idHtml: room.get('idHtml'),
-            idGoogle: room.get('idGoogle')
+            idGoogle: room.get('idGoogle'),
+            free: 1
         };
     }
 

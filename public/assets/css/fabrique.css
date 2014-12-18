@@ -490,3 +490,10 @@ div.selection:hover {
 	top: 0px;
 	margin: 4px;
 }
+
+.free{
+	background-color: green;
+}
+.busy{
+	background-color: red;
+}
