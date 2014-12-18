@@ -28,7 +28,9 @@
 		<div id="vide-escalier" class="inaccessible cadre">
 		</div>
 		<div id="vide-principal" class="inaccessible cadre">
-			<div ng-drag="true" ng-repeat="user in vm.users" ng-drag-data="user" class="ng-binding" draggable="false"> {{ user.fullname }} </div>
+			<div ng-repeat="user in vm.users" ng-drag="true" ng-drag-data="user" draggable="false" class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-content="{{user.fullname}}" >
+				<!--<span style="display: none;">Nom Prénom</span>-->
+			</div>
 		</div>
 	</div>
 
@@ -54,10 +56,8 @@
 
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
 		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
-			<div class="zone-chaise">
+			<div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropComplete($data,$event,desktop)">
 				<div class="chaise"></div>
-				<div class="personne empty selection" my-qtip="" qtip-content="{{desktop.name}}" style="color: green; display: inline-block;" skin="green" data-hasqtip="1">
-				</div>
 			</div>
 			<div class="bureau selection"></div>
 		</div>

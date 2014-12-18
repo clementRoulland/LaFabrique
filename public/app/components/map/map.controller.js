@@ -13,6 +13,15 @@
         vm.loadRooms = loadRooms;
         vm.loadUsers = loadUsers;
 
+        vm.onDropComplete=function(data,evt,desktop){
+            console.log('onDropComplete on desktop ' + desktop.name);
+            console.log(data);
+        }
+        vm.onDragSuccess=function(data,evt){
+            console.log('onDragSuccess1');
+        }
+  
+
         function loadGroups(zone) {
             MapFactory.getDesktopGroupsByZone(zone)
                 .then(function (data) {

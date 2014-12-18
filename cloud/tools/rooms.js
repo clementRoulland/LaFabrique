@@ -9,11 +9,11 @@ module.exports = [
         "idGoogle": "digitaleo.com_2d31313239353834353233@resource.calendar.google.com",
         "idHtml": "a2up",
         "name": "La Fabrique A2 UP",
-        "zone": "rdc",
+        "zone": "etage",
     },
 	{
         "idGoogle": "digitaleo.com_373335303635322d373837@resource.calendar.google.com",
-        "idHtml": "a10",
+        "idHtml": "a10up",
         "name": "A10UP",
         "zone": "etage",
     },

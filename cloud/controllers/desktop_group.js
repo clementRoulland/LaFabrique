@@ -8,7 +8,7 @@ module.exports = function(){
 	app.get('/', authentication, getAll);
 	app.get('/zone/:zone', authentication, getByZone);
 
-	function getAll(res, req){
+	function getAll(req, res){
 		var query = new Parse.Query(DesktopGroup);
 		query.include("desktops.user");
 		query.include("desktops.phone");
