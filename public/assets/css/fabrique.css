@@ -9,29 +9,32 @@ personne à son poste : #367fa9;
 
 **/
 
-
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .cadre {
-	border: 1px solid #eee;
+    border: 1px solid #eee;
 }
+
 .cadre-haut {
-	border-top: 1px solid #eee;
+    border-top: 1px solid #eee;
 }
+
 .cadre-bas {
-	border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
+
 .cadre-droite {
-	border-right: 1px solid #eee;
+    border-right: 1px solid #eee;
 }
+
 .cadre-gauche {
-	border-left: 1px solid #eee;
+    border-left: 1px solid #eee;
 }
 
 .inaccessible {
-	background: black url("../img/diagonals.gif") fixed;
+    background: black url("../img/diagonals.gif") fixed;
 }
 
 div.selection:hover {
@@ -40,10 +43,11 @@ div.selection:hover {
 
 /** commun **/
 .zone {
-	width: 1200px;
-	height: 900px;
-	position: relative;
+    width: 1200px;
+    height: 900px;
+    position: relative;
 }
+
 .zone-commun {
 	width: 1200px;
 	height: 760px;
@@ -52,57 +56,66 @@ div.selection:hover {
 }
 
 .rooms-bureaux {
-	width: 160px;
-	height: 255px;
-	position: absolute;
+    width: 160px;
+    height: 255px;
+    position: absolute;
 }
 
 .groupe-bureaux {
-	width: 160px;
-	height: 255px;
-	position: absolute;
+    width: 160px;
+    height: 255px;
+    position: absolute;
 }
+
 .poste-travail {
-	height: 85px;
-	width: 80px;
-	float: left;
+    height: 85px;
+    width: 80px;
+    float: left;
 }
+
 .groupe-bureaux .poste-travail:nth-child(odd) .bureau,
 .groupe-bureaux .poste-travail:nth-child(odd) .zone-chaise {
-	float: left;
+    float: left;
 }
+
 .groupe-bureaux .poste-travail:nth-child(even) .bureau,
 .groupe-bureaux .poste-travail:nth-child(even) .zone-chaise {
-	float: right;
+    float: right;
 }
+
 .bureau {
-	border: 1px solid #eee;
-	width: 40px;
-	height: 85px;
-	background-color: white;
+    border: 1px solid #eee;
+    width: 40px;
+    height: 85px;
+    background-color: white;
 }
+
 .zone-chaise {
-	width: 40px;
-	height: 85px;
-	position: relative;
-	background-color: transarent;
+    width: 40px;
+    height: 85px;
+    position: relative;
+    background-color: transarent;
 }
+
 .chaise, .personne {
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	border: 1px solid #eee;
-	margin: 5px;
-	position: absolute;
-	top: 25px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    margin: 5px;
+    position: absolute;
+    top: 25px;
+    z-index: 9999;
 }
+
 .personne {
-	background-color: #367fa9;
-	border: 1px solid #367fa9;
+    background-color: #367fa9;
+    border: 1px solid #367fa9;
 }
+
 .chaise {
-	background-color: #ccc;
-	border: 1px solid #ccc;
+    background-color: #ccc;
+    border: 1px solid #ccc;
 }
 
 /** commun **/
@@ -111,13 +124,15 @@ div.selection:hover {
 	width: 480px;
 	border-right: 1px solid #eee;
 }
+
 #stockage {
-	height: 160px;
-	width: 440px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
+    height: 160px;
+    width: 440px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
+
 #fabrication {
 	height: 599px;
 	width: 440px;
@@ -135,342 +150,360 @@ div.selection:hover {
 .grande-fabrique-j{
 	display: inline-block;
 	width: 60px;
-	height: 60px;	
+	height: 60px;
 }
 
-
 /** RDC **/
-#rdc-zone-bas
-{
-	top: 600px;
-	height: 300px;
-	width: 100%;
-	position: relative;
+#rdc-zone-bas {
+    top: 600px;
+    height: 300px;
+    width: 100%;
+    position: relative;
 }
 
 #bureau-commerce {
-	width: 180px;
-	height: 300px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
+    width: 180px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
+
 #a4 {
-	width: 150px;
-	height: 180px;
-	position: absolute;
-	top: 350px;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	border-right: 1px solid #eee;
+    width: 150px;
+    height: 180px;
+    position: absolute;
+    top: 350px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
 }
+
 #bureau-marketing {
-	top:300px;
-	height: 300px;
-	width: 180px;
-	position: absolute;
-	right: 0px;
+    top: 300px;
+    height: 300px;
+    width: 180px;
+    position: absolute;
+    right: 0px;
 }
+
 #rdc-sanitaires {
-	width: 165px;
-	height: 100%;
-	position: relative;
-	left: 260px;
+    width: 165px;
+    height: 100%;
+    position: relative;
+    left: 260px;
 }
+
 #bureau-tag {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 475px;
-	height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 475px;
+    height: 100%;
 }
+
 #rdc-cafe {
-	position: absolute;
-	top: 0px;
-	right: 575px;
-	height: 200px;
-	width: 75px;
+    position: absolute;
+    top: 0px;
+    right: 575px;
+    height: 200px;
+    width: 75px;
 }
+
 #a8 {
-	position: absolute;
-	top: 600px;
-	right: 475px;
-	height: 200px;
-	width: 100px;
-	border: 1px solid #eee;
-	
+    position: absolute;
+    top: 600px;
+    right: 475px;
+    height: 200px;
+    width: 100px;
+    border: 1px solid #eee;
+
 }
+
 #imprimante {
-	position: absolute;
-	bottom: 0px;
-	right: 475px;
-	height: 100px;
-	width: 175px;
+    position: absolute;
+    bottom: 0px;
+    right: 475px;
+    height: 100px;
+    width: 175px;
 }
 
 #patio {
-	position: absolute;
-	top: 300px;
-	right: 180px;
-	width: 800px;
-	height: 300px;
-	background-color: #66AD00; 
-	/*background: url("../img/grass.jpg") repeat;*/
+    position: absolute;
+    top: 300px;
+    right: 180px;
+    width: 800px;
+    height: 300px;
+    background-color: #66AD00;
+    /*background: url("../img/grass.jpg") repeat;*/
 }
 
 #patio-cercle {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-	margin: 5px;
-	position: absolute;
-	top: 48px;
-	right: 110px;
-	background-color: #D8AD7D;
-	/*background: url("../img/parquet.jpg") repeat;*/
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    position: absolute;
+    top: 48px;
+    right: 110px;
+    background-color: #D8AD7D;
+    /*background: url("../img/parquet.jpg") repeat;*/
 }
 
 .rdc-plateau {
-	background-color: #D8AD7D;
-	/*background: url("../img/parquet.jpg") repeat;*/
+    background-color: #D8AD7D;
+    /*background: url("../img/parquet.jpg") repeat;*/
 }
+
 #ilot-rdc-1 {
-	left: 26px;
-	bottom: 0px;
+    left: 26px;
+    bottom: 0px;
 }
 
 #ilot-rdc-2 {
-	right: 262px;
-	bottom: 0px;
+    right: 262px;
+    bottom: 0px;
 }
 
 #ilot-rdc-3 {
-	bottom: 0px;
-	right: 51px;
+    bottom: 0px;
+    right: 51px;
 }
 
 #ilot-rdc-4 {
-	top: 46px;
-	left: 0px;
+    top: 46px;
+    left: 0px;
 }
 
 #ilot-rdc-5 {
-	top: 46px;
-	left: 218px;
+    top: 46px;
+    left: 218px;
 }
 
 #ilot-rdc-6 {
-	top: 46px;
-	left: 390px;
+    top: 46px;
+    left: 390px;
 }
 
 #ilot-rdc-7 {
-	top: 46px;
-	left: 610px;
+    top: 46px;
+    left: 610px;
 }
 
 #ilot-rdc-8 {
-	top: 46px;
-	left: 783px;
+    top: 46px;
+    left: 783px;
 }
 
 #ilot-rdc-commerce {
-	top: 100px;
-	right: 50px;
-	width: 80px;
-	height: 255px;
+    top: 100px;
+    right: 50px;
+    width: 80px;
+    height: 255px;
 }
 
 #ilot-rdc-marketing {
-	top: 405px;
-	right: 50px;
-	width: 80px;
-	height: 255px;
+    top: 405px;
+    right: 50px;
+    width: 80px;
+    height: 255px;
 }
 
 #ilot-rdc-marketing .poste-travail .bureau,
 #ilot-rdc-marketing .poste-travail .zone-chaise,
 #ilot-rdc-commerce .poste-travail .bureau,
 #ilot-rdc-commerce .poste-travail .zone-chaise {
-	float: right; 
+    float: right;
 }
-
-
 
 /** etage **/
 .bureaux-fond {
-	width: 180px;
-	height: 100%;
-	/*background: url("../img/parquet.jpg") repeat;*/
-	background-color: #D8AD7D;
+    width: 180px;
+    height: 100%;
+    /*background: url("../img/parquet.jpg") repeat;*/
+    background-color: #D8AD7D;
 }
+
 .bureau-fond-rue {
-	/*background: url("../img/parquet.jpg") repeat;*/
-	background-color: #D8AD7D;
+    /*background: url("../img/parquet.jpg") repeat;*/
+    background-color: #D8AD7D;
 }
+
 .bureau-fond-parking {
-	position: absolute;
-	top: 0;
-	right: 0px;
+    position: absolute;
+    top: 0;
+    right: 0px;
 }
+
 .bureau-fond {
-	width: 100%;
-	height: 300px;
-	top: 0px;
-	right: 100px;
+    width: 100%;
+    height: 300px;
+    top: 0px;
+    right: 100px;
 }
+
 #bureau-assistant {
-	position: absolute;
-	top: 0;
-	left: 0px;
+    position: absolute;
+    top: 0;
+    left: 0px;
 }
+
 #bureau-direction {
-	position: absolute;
-	top: 300px;
-	left: 0px;
+    position: absolute;
+    top: 300px;
+    left: 0px;
 }
+
 #a10up {
-	top: 600px;
-	left: 0px;
-	width: 180px;
-	height: 300px;
-	border-right: 1px solid #eee;
-	border-top: 1px solid #eee;
+    top: 600px;
+    left: 0px;
+    width: 180px;
+    height: 300px;
+    border-right: 1px solid #eee;
+    border-top: 1px solid #eee;
 }
 
 #a2up {
-	top: 0;
-	right: 0px;
-	height: 100px; 
-	width: 180px;
-	border-left: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+    top: 0;
+    right: 0px;
+    height: 100px;
+    width: 180px;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 
 }
+
 #bureau-produit {
-	position: absolute;
-	top: 100px;
-	left: 0px;
-	height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    height: 200px;
 }
+
 #bureau-rh {
-	position: absolute;
-	top: 300px;
-	left: 0px;
+    position: absolute;
+    top: 300px;
+    left: 0px;
 }
+
 #a8up {
-	right: 0;
-	top: 600px;
-	width: 180px;
-	height: 199px;
-	border-left: 1px solid #eee;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+    right: 0;
+    top: 600px;
+    width: 180px;
+    height: 199px;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
+
 #salle-detente {
-	position: absolute;
-	right: 0px;
-	top: 800px;
-	height: 99px;
-	background-color: #CC0000;
+    position: absolute;
+    right: 0px;
+    top: 800px;
+    height: 99px;
+    background-color: #CC0000;
 }
+
 .etage-plateau {
-	width: 1000px;
-	height: 100%;
-	position: absolute;
-	top: 0px;
-	left: 180px;
-	background-color: #D8AD7D;
-	/*background: url("../img/parquet.jpg") repeat;*/
+    width: 1000px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 180px;
+    background-color: #D8AD7D;
+    /*background: url("../img/parquet.jpg") repeat;*/
 }
+
 #etage-moquette {
-	background-color: #66AD00;
-	/*background: url("../img/grass.jpg") repeat;*/
-	width: 839px;
-	height: 388px;
-	position: absolute;
-	top: 255px;
-	left: 0px;
+    background-color: #66AD00;
+    /*background: url("../img/grass.jpg") repeat;*/
+    width: 839px;
+    height: 388px;
+    position: absolute;
+    top: 255px;
+    left: 0px;
 }
+
 #vide-escalier {
-	position: absolute;
-	width: 250px;
-	height: 300px;
-	top: 300px;
-	left: 50px;
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    top: 300px;
+    left: 50px;
 }
+
 #vide-principal {
-	position: absolute;
-	width: 400px;
-	height: 300px;
-	top: 300px;
-	left: 375px;
-	background-color: white;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 300px;
+    left: 375px;
+    background-color: white;
 }
 
 #ilot-etage-1 {
-	left: 230px;
-	bottom: 0px;
+    left: 230px;
+    bottom: 0px;
 }
 
 #ilot-etage-2 {
-	right: 215px;
-	bottom: 0px;
+    right: 215px;
+    bottom: 0px;
 }
 
 #ilot-etage-3 {
-	top: 0px;
-	left: 230px;
+    top: 0px;
+    left: 230px;
 }
 
 #ilot-etage-4 {
-	top: 0px;
-	left: 430px;
+    top: 0px;
+    left: 430px;
 }
 
 #ilot-etage-5 {
-	top: 0px;
-	left: 630px;
+    top: 0px;
+    left: 630px;
 }
 
 #ilot-etage-6 {
-	top: 0px;
-	left: 830px;
+    top: 0px;
+    left: 830px;
 }
 
-
 #ilot-etage-7 {
-	bottom: 0px;
-	left: 705px;
-	width: 80px;
-	height: 255px;
+    bottom: 0px;
+    left: 705px;
+    width: 80px;
+    height: 255px;
 }
 
 #ilot-etage-direction {
-	top: 405px;
-	left: 50px;
-	width: 80px;
-	height: 255px;
+    top: 405px;
+    left: 50px;
+    width: 80px;
+    height: 255px;
 }
 
 #ilot-etage-assistant {
-	top: 100px;
-	left: 50px;
-	width: 80px;
-	height: 255px;
+    top: 100px;
+    left: 50px;
+    width: 80px;
+    height: 255px;
 }
+
 #ilot-etage-produit {
-	top: 155px;
-	right: 50px;
-	width: 80px;
-	height: 255px;
+    top: 155px;
+    right: 50px;
+    width: 80px;
+    height: 255px;
 }
 
 #ilot-etage-rh {
-	top: 405px;
-	right: 50px;
-	width: 80px;
-	height: 255px;
+    top: 405px;
+    right: 50px;
+    width: 80px;
+    height: 255px;
 }
 
 #ilot-etage-produit .poste-travail .bureau,
@@ -479,35 +512,38 @@ div.selection:hover {
 #ilot-etage-rh .poste-travail .zone-chaise,
 #ilot-etage-7 .poste-travail .bureau,
 #ilot-etage-7 .poste-travail .zone-chaise {
-	float: right; 
+    float: right;
 }
 
 #ilot-etage-direction .poste-travail .bureau,
 #ilot-etage-direction .poste-travail .zone-chaise,
 #ilot-etage-assistant .poste-travail .bureau,
-#ilot-etage-assistant .poste-travail .zone-chaise{
-	float: left; 
+#ilot-etage-assistant .poste-travail .zone-chaise {
+    float: left;
 }
 
 #etage-sanitaires {
-	width: 275px;
-	height: 255px;
-	position: absolute;
-	bottom: 0px;
-	left: 250px;
+    width: 275px;
+    height: 255px;
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
 }
+
 #vide-principal .personne,
 #patio .personne,
 .rooms-bureaux .personne {
-	position: relative;
-	float: left;
-	top: 0px;
-	margin: 4px;
+    position: relative;
+    float: left;
+    top: 0px;
+    margin: 4px;
 }
 
-.free{
-	background-color: green;
+.free, .free:hover {
+    background-color: green !important;
 }
-.busy{
-	background-color: red;
+
+.busy, .busy:hover {
+    background-color: red !important;
 }
+
