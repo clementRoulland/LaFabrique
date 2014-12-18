@@ -22,13 +22,13 @@ module.exports = function () {
         });
     };
 
-    function toJSON(rooms) {
+    function toJSON(room) {
         return {
-            objectId: rooms.id,
-            name: rooms.get('name'),
-            zone: rooms.get('zone'),
-            idHtml: rooms.get('idHtml'),
-            idGoogle: rooms.get('idGoogle')
+            objectId: room.id,
+            name: room.get('name'),
+            zone: room.get('zone'),
+            idHtml: room.get('idHtml'),
+            idGoogle: room.get('idGoogle')
         };
     }
 
