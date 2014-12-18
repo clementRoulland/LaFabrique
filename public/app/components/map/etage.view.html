@@ -56,8 +56,7 @@
 		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
 			<div class="zone-chaise">
 				<div class="chaise"></div>
-				<div class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1">
-					<!--<span style="display: none;">Nom Prénom</span>-->
+				<div class="personne empty selection" my-qtip="" qtip-content="{{desktop.name}}" style="color: green; display: inline-block;" skin="green" data-hasqtip="1">
 				</div>
 			</div>
 			<div class="bureau selection"></div>

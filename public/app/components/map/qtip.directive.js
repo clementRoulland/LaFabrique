@@ -5,14 +5,14 @@
 	.module('LaFabriqueApp')
 	.directive("myQtip", function () {
 		return function (scope, element, attrs) {
-			var text = element.attr('qtip-content') || null,
-			title = element.attr('qtip-title') || null;
-
+			
 			scope.qtipSkin = (attrs.skin ? "qtip-" + attrs.skin : "qtip-dark");
 
 			element.qtip({
 				content: {
-					text: text
+					text: function (event,api) {
+            				return element.attr('qtip-content') || null;
+            			}
 					/*,title: title*/
 				},
 

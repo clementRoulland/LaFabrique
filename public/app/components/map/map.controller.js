@@ -35,15 +35,20 @@
                     vm.rooms = data;
                     handleClientLoad();
 
-                    var scopes = 'https://www.googleapis.com/auth/calendar';
+                    // charline
+                    var clientId = '667329706372-tqqdq7g47i908aq1o5hh0rcr8o4p9s2l.apps.googleusercontent.com';
+                    var apiKey = 'AIzaSyCoTCpix7-1J2uoZDeNWuBrW0SpFqkvnro';
 
                     //jérémy
                     //var clientId = '1093274570499-3254tc7cprnadm7m0j9ko91v40grk3ng.apps.googleusercontent.com';
                     //var apiKey = 'AIzaSyCfY99eB6B9UbNc_6ZTikqEQ-dgtpNz5RY';
                     
                     //fabien
-                    var clientId = '982590332371-9oig79t588rnf7qrr6e0p2gk5qgn0m8h.apps.googleusercontent.com';
-                    var apiKey = 'AIzaSyBiCbCx8y5RkUSvumROQ-IqxR-IPY2X_sY';
+                    //var clientId = '982590332371-9oig79t588rnf7qrr6e0p2gk5qgn0m8h.apps.googleusercontent.com';
+                    //var apiKey = 'AIzaSyBiCbCx8y5RkUSvumROQ-IqxR-IPY2X_sY';
+
+                    
+                    var scopes = 'https://www.googleapis.com/auth/calendar';
                     
                     function handleClientLoad() {
                         gapi.client.setApiKey(apiKey);

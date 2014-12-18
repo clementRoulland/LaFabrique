@@ -4,7 +4,7 @@ moquette verte : #66AD00
 moquette rouge : #CC0000
 bordures : #eee
 salles inaccessibles : #eee
-
+personne à son poste : #367fa9;
 
 
 **/
@@ -95,15 +95,14 @@ div.selection:hover {
 	position: absolute;
 	top: 25px;
 }
-
-.personne.away {
-	background-color: #eee;
+.personne {
+	background-color: #367fa9;
+	border: 1px solid #367fa9;
 }
-.personne.there {
-	background-color: blue;
-	border: 1px solid blue;
+.chaise {
+	background-color: #ccc;
+	border: 1px solid #ccc;
 }
-
 
 /** commun **/
 #grande-fabrique {
