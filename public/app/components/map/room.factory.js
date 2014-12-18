@@ -13,7 +13,7 @@
 		}
 		
 		function getRooms() {
-			return $http.get('/api/rooms/')
+			return $http.get('/api/room/')
 				.then(complete)
 				.catch(failed);
 
