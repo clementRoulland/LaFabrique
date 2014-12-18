@@ -46,8 +46,9 @@ div.selection:hover {
 }
 .zone-commun {
 	width: 1200px;
-	height: 800px;
+	height: 760px;
 	position: relative;
+	background-color: #D8AD7D;
 }
 
 .rooms-bureaux {
@@ -108,6 +109,7 @@ div.selection:hover {
 #grande-fabrique {
 	height: 100%;
 	width: 480px;
+	border-right: 1px solid #eee;
 }
 #stockage {
 	height: 160px;
@@ -117,11 +119,23 @@ div.selection:hover {
 	right: 0px;
 }
 #fabrication {
-	height: 640px;
+	height: 599px;
 	width: 440px;
 	position: absolute;
 	top: 160px;
 	right: 0px;
+	border-left: 1px solid #eee;
+}
+
+
+.grande-fabrique-i{
+	position: relative;
+}
+
+.grande-fabrique-j{
+	display: inline-block;
+	width: 60px;
+	height: 60px;	
 }
 
 
