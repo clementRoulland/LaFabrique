@@ -1,9 +1,9 @@
 /** COLORS
-parquet : #B89470
+parquet : #C2C2A3
 moquette verte : #2EB82E
 moquette rouge : #CC0000
-bordures : #ccc
-salles inaccessibles : #ccc
+bordures : #eee
+salles inaccessibles : #eee
 
 
 
@@ -15,19 +15,19 @@ salles inaccessibles : #ccc
 }
 
 .cadre {
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 }
 .cadre-haut {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #eee;
 }
 .cadre-bas {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #eee;
 }
 .cadre-droite {
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #eee;
 }
 .cadre-gauche {
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #eee;
 }
 
 div.selection:hover {
@@ -74,7 +74,7 @@ div.selection:hover {
 	float: left;
 }
 .bureau {
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 	width: 40px;
 	height: 85px;
 	background-color: white;
@@ -89,13 +89,13 @@ div.selection:hover {
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 	margin: 5px;
 	position: absolute;
 	top: 25px;
 }
 .personne.away {
-	background-color: #ccc;
+	background-color: #eee;
 }
 .personne.there {
 	background-color: blue;
@@ -154,7 +154,7 @@ div.selection:hover {
 	height: 100%;
 	position: relative;
 	left: 218px;
-	background-color: #ccc;
+	background-color: #eee;
 }
 #bureau-tag {
 	position: absolute;
@@ -199,10 +199,10 @@ div.selection:hover {
 .bureaux-fond {
 	width: 180px;
 	height: 100%;
-	background-color: #B89470;
+	background-color: #C2C2A3;
 }
 .bureau-fond-rue {
-	background-color: #B89470;
+	background-color: #C2C2A3;
 }
 .bureau-fond-parking {
 	position: absolute;
@@ -257,10 +257,10 @@ div.selection:hover {
 	position: absolute;
 	top: 0px;
 	left: 180px;
-	background-color: #B89470;
+	background-color: #C2C2A3;
 }
 #etage-moquette {
-	background-color: #2EB82E;
+	background-color: #2EB82E; 
 	width: 839px;
 	height: 394px;
 	position: absolute;
@@ -325,5 +325,5 @@ div.selection:hover {
 	position: absolute;
 	bottom: 0px;
 	left: 250px;
-	background-color: #ccc;
+	background-color: #eee;
 }
