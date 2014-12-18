@@ -9,7 +9,7 @@
 	</ol>
 </section>
 
-<div class="zone cadre" id="etage" ng-init="vm.loadGroups('etage');vm.loadRooms();vm.loadUsers();">
+<div class="zone cadre" id="etage" ng-init="vm.googleConnect();vm.loadGroups('etage');vm.loadRooms();vm.loadUsers();">
 	<div class="bureaux-fond cadre-droite">
 		<div class="bureau-fond cadre-bas" id="bureau-assistant">
 		</div>
@@ -41,8 +41,12 @@
 	</div>
 
 	<div ng-repeat="room in vm.rooms" ng-show="room.zone=='etage'" class="rooms-bureaux selection" id="{{room.idHtml}}" ng-class="room.free == 1 ? 'free' : 'busy'" >
-		<div><center><b>{{room.name}}</b></center></div>
-        <div ng-repeat="occupant in room.occupants" ng-drag="false" ng-drag-data="user" draggable="false" class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-content="{{occupant.displayName}}" >
+        <div>
+            <center><b>{{room.name}}</b></center>
+        </div>
+        <div ng-repeat="occupant in room.occupants" ng-drag="false" ng-drag-data="user" draggable="false"
+             class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
+             data-hasqtip="1" qtip-content="{{occupant.displayName}}">
         </div>
 	</div>
 

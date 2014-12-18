@@ -1,28 +1,37 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-	<h1>
-		Communs
-	</h1>
-	<ol class="breadcrumb">
-		<li><a href="/"><i class="fa fa-dashboard"></i> Plan</a></li>
-		<li class="active">Communs</li>
-	</ol>
+    <h1>
+        Communs
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Plan</a></li>
+        <li class="active">Communs</li>
+    </ol>
 </section>
 
-<div class="zone-commun cadre" id="commun" ng-init="vm.loadGroups('etage');vm.loadRooms();vm.loadUsers();">
-	<div id="stockage" class="inaccessible cadre-gauche cadre-bas">
-	</div>
-	
-	<div ng-repeat="room in vm.rooms" ng-show="room.zone=='commun'" class="rooms-bureaux selection" id="{{room.idHtml}}">
-		<div>{{room.name}}</div>
-	</div>
+<div class="zone-commun cadre" id="commun"
+     ng-init="vm.googleConnect();vm.loadGroups('etage');vm.loadRooms();vm.loadUsers();">
+    <div id="stockage" class="inaccessible cadre-gauche cadre-bas">
+    </div>
 
-	<div style="position: absolute; top:200px">
-		<div data-ng-repeat="i in [1,2,3,4,5,6,7,8]" class="grande-fabrique-i">
-  			<div class="grande-fabrique-j" data-ng-repeat="j in [1,2,3,4,5,6,7,8]">
-  				<div class="personne empty selection" my-qtip="" qtip-content="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1">
-			</div>
-		</div>
-	</div>
-</div>
+    <div ng-repeat="room in vm.rooms" ng-show="room.zone=='commun'" class="rooms-bureaux selection"
+         id="{{room.idHtml}}" ng-class="room.free == 1 ? 'free' : 'busy'">
+        <div>
+            <center><b>{{room.name}}</b></center>
+        </div>
+        <div ng-repeat="occupant in room.occupants" ng-drag="false" ng-drag-data="user" draggable="false"
+             class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
+             data-hasqtip="1" qtip-content="{{occupant.displayName}}">
+        </div>
+    </div>
+
+    <div style="position: absolute; top:200px">
+        <div data-ng-repeat="i in [1,2,3,4,5,6,7,8]" class="grande-fabrique-i">
+            <div class="grande-fabrique-j" data-ng-repeat="j in [1,2,3,4,5,6,7,8]">
+                <div class="personne empty selection" my-qtip="" qtip-content=""
+                     style="color: green; display: inline-block;" skin="green" data-hasqtip="1">
+                </div>
+            </div>
+        </div>
+    </div>
 
