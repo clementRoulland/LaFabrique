@@ -5,11 +5,13 @@
         .module('LaFabriqueApp')
         .controller('MapController', MapController);
 
-    MapController.$inject = ['MapFactory', 'RoomFactory'];
+    MapController.$inject = ['MapFactory', 'RoomFactory', 'UserFactory'];
 
-    function MapController(MapFactory, RoomFactory) {
+    function MapController(MapFactory, RoomFactory, UserFactory) {
         var vm = this;
         vm.loadGroups = loadGroups;
+        vm.loadRooms = loadRooms;
+        vm.loadUsers = loadUsers;
 
         function loadGroups(zone) {
             MapFactory.getDesktopGroupsByZone(zone)
@@ -20,17 +22,14 @@
                 .catch();
         }
 
-        // without seats
-        vm.users = [
-            {
-                name: "à placer"
-            },
-            {
-                name: "à placer 2"
-            }
-        ];
+        function loadUsers(){
+            UserFactory.getUsers()
+                .then(function (data) {
+                    vm.users = data;
+                })
+                .catch();
+        }
 
-        vm.rooms = loadRooms;
         function loadRooms() {
             RoomFactory.getRooms()
                 .then(function (data) {

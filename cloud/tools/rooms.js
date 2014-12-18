@@ -7,8 +7,8 @@ module.exports = [
     },
 	{
         "idGoogle": "digitaleo.com_2d31313239353834353233@resource.calendar.google.com",
-        "idHtml": "a2",
-        "name": "La Fabrique A2",
+        "idHtml": "a2up",
+        "name": "La Fabrique A2 UP",
         "zone": "rdc",
     },
 	{

@@ -26,6 +26,7 @@ module.exports = function () {
         return {
             objectId: rooms.id,
             name: rooms.get('name'),
+            zone: rooms.get('zone'),
             idHtml: rooms.get('idHtml'),
             idGoogle: rooms.get('idGoogle')
         };

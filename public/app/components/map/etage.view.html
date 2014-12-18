@@ -10,7 +10,7 @@
 	</ol>
 </section>
 
-<div class="zone cadre" id="etage" ng-init="vm.loadGroups('etage')">
+<div class="zone cadre" id="etage" ng-init="vm.loadGroups('etage');vm.loadRooms();vm.loadUsers();">
 	<div class="bureaux-fond cadre-droite">
 		<div class="bureau-fond cadre-bas" id="bureau-assistant">
 		</div>
@@ -29,7 +29,7 @@
 		<div id="vide-escalier" class="inaccessible cadre">
 		</div>
 		<div id="vide-principal" class="inaccessible cadre">
-			<div ng-drag="true" ng-drag-data="vm.users" class="ng-binding" draggable="false"> one </div>
+			<div ng-drag="true" ng-repeat="user in vm.users" ng-drag-data="user" class="ng-binding" draggable="false"> {{ user.fullname }} </div>
 		</div>
 	</div>
 
