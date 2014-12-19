@@ -36,6 +36,12 @@ module.exports = function(){
 			desktopGroupJSON.desktops.forEach(function(desktopJSON){
 				var parseDesktop = new Desktop();
 				parseDesktop.set('name', desktopJSON.name);
+				if(desktopJSON.phone){
+					parseDesktop.set('phone', {
+						'number': '' + desktopJSON.phone.shortNumber,
+						'shortNumber': desktopJSON.phone.shortNumber,
+					});
+				}
 				desktops.push(parseDesktop);
 			});
 
@@ -63,9 +69,7 @@ module.exports = function(){
 		var users = require('cloud/tools/users');
 		console.log(users);
 		users.forEach(function(userJSON){
-
 			var userParse = new User();
-			userParse.setACL(acl);
 
 			userParse.setUsername(userJSON.email.split("@")[0]);
 			userParse.setPassword(userJSON.email.split("@")[0]);

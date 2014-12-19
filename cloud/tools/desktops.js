@@ -5,6 +5,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'etage-1-1',
+				'phone': {
+					'shortNumber': '2323',
+				}
 			},
 			{
 				'name': 'etage-1-2',

@@ -30,7 +30,7 @@
     <div id="patio" class="cadre-haut cadre-gauche" ng-drop="true" ng-drop-success="vm.onDropToStack($data,$event)">
         <div ng-repeat="user in vm.users | orderBy:'fullname'" ng-drag="true" ng-drag-data="user" draggable="false"
              class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
-             data-hasqtip="1" qtip-content="{{user.fullname}}">
+             data-hasqtip="1" qtip-title="{{user.fullname}}" qtip-content="{{user.email}}">
         </div>
         <div id="patio-cercle"></div>
     </div>

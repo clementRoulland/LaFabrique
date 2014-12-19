@@ -28,7 +28,6 @@
         };
 
         function setDeskUser(desk, user) {
-            console.log(user);
             return $http.get('/api/deskgroup/' + desk.objectId + '/user/' + (user?user.objectId:0));
 
             function complete(response) {

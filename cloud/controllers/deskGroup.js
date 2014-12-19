@@ -14,7 +14,6 @@ module.exports = function(){
 	function getAll(req, res){
 		var query = new Parse.Query(DesktopGroup);
 		query.include("desktops.user");
-		query.include("desktops.phone");
 		query.find({
 			success: function(results) {
 				var desktopGroups = new Array();
@@ -33,7 +32,6 @@ module.exports = function(){
 		var query = new Parse.Query(DesktopGroup);
 		query.equalTo('zone', zone);
 		query.include("desktops.user");
-		query.include("desktops.phone");
 		query.find({
 			success: function(results) {
 				var desktopGroups = new Array();
@@ -94,6 +92,7 @@ module.exports = function(){
 				var desktop = {
 					objectId: itDesktop.id,
 					name: itDesktop.get('name'),
+					phone: itDesktop.get('phone'),
 					user: itDesktop.get('user')?
 					{
 						objectId: itDesktop.get('user').id,

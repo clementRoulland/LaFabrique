@@ -2,8 +2,8 @@
     'use strict';
 
     angular
-        .module('LaFabriqueApp')
-        .controller('MapController', MapController);
+    .module('LaFabriqueApp')
+    .controller('MapController', MapController);
 
     MapController.$inject = ['DeskFactory', 'RoomFactory', 'UserFactory'];
 
@@ -16,7 +16,7 @@
         vm.onDropToDesk     = onDropToDesk;
         vm.onDragFromDesk   = onDragFromDesk;
         vm.onDropToStack    = onDropToStack;
-        vm.googleConnect = googleConnect;
+        vm.googleConnect    = googleConnect;
 
         // charline
         //var clientId = '667329706372-tqqdq7g47i908aq1o5hh0rcr8o4p9s2l.apps.googleusercontent.com';
@@ -38,7 +38,6 @@
         var isLoggedWithGoogle = false;
 
         function onDropToDesk(data,evt,desktop){
-            console.log('onDropToDesk');
             if(desktop.user){
                 vm.users.push(desktop.user);
             }
@@ -55,23 +54,22 @@
         }
 
         function onDropToStack(data,evt){
-            console.log('onDropToStack');
         }
 
         function loadGroups(zone) {
             DeskFactory.getDesksGroupsByZone(zone)
-                .then(function (data) {
-                    vm.groups = data;
-                })
-                .catch();
+            .then(function (data) {
+                vm.groups = data;
+            })
+            .catch();
         }
 
         function loadUsers() {
             UserFactory.getUsers()
-                .then(function (data) {
-                    vm.users = data;
-                })
-                .catch();
+            .then(function (data) {
+                vm.users = data;
+            })
+            .catch();
         }
 
         function googleConnect() {
@@ -92,37 +90,37 @@
 
         function loadRooms() {
             RoomFactory.getRooms()
-                .then(function (data) {
-                    vm.rooms = data;
-                    if (isLoggedWithGoogle) {
-                        angular.forEach(data, function (room, key) {
-                            gapi.client.load('calendar', 'v3', function () {
-                                var start_date = new Date();
-                                var end_date = new Date();
-                                end_date.setMinutes(end_date.getMinutes() + 1);
-                                var request = gapi.client.calendar.events.list({
-                                    "calendarId": room.idGoogle,
-                                    "singleEvents": true,
-                                    "orderBy": "startTime",
-                                    "timeMin": start_date.toISOString(),
-                                    "timeMax": end_date.toISOString()
-                                });
-                                request.then(function (resp) {
-                                    var calendarEvent = resp.result;
-                                    room.free = calendarEvent.items.length == 0;
-                                    if (calendarEvent.items.length != 0) {
-                                        room.occupants = calendarEvent.items[0].attendees;
-                                    }
-                                    vm.rooms[key] = room;
-                                });
+            .then(function (data) {
+                vm.rooms = data;
+                if (isLoggedWithGoogle) {
+                    angular.forEach(data, function (room, key) {
+                        gapi.client.load('calendar', 'v3', function () {
+                            var start_date = new Date();
+                            var end_date = new Date();
+                            end_date.setMinutes(end_date.getMinutes() + 1);
+                            var request = gapi.client.calendar.events.list({
+                                "calendarId": room.idGoogle,
+                                "singleEvents": true,
+                                "orderBy": "startTime",
+                                "timeMin": start_date.toISOString(),
+                                "timeMax": end_date.toISOString()
+                            });
+                            request.then(function (resp) {
+                                var calendarEvent = resp.result;
+                                room.free = calendarEvent.items.length == 0;
+                                if (calendarEvent.items.length != 0) {
+                                    room.occupants = calendarEvent.items[0].attendees;
+                                }
+                                vm.rooms[key] = room;
                             });
                         });
-                    }
-                })
-                .catch();
-        }
+});
+}
+})
+.catch();
+}
 
 
-    };
+};
 
 })();

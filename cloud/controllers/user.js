@@ -46,10 +46,8 @@ module.exports = function(){
 								usersWithDesktop.push(desktop.get('user'));
 							}
 						});
-						console.log(usersWithDesktop);
 						var users = new Array();
 						usersFromQuery.forEach(function(user){
-							console.log(arrayContainsObject(usersWithDesktop, user));
 							if(!arrayContainsObject(usersWithDesktop, user)){
 								var userToJson = toJSON(user);
 								users.push(userToJson);
