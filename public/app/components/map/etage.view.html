@@ -43,15 +43,17 @@
         <div class="bureau-fond inaccessible" id="salle-detente"></div>
     </div>
 
-    <div ng-repeat="room in vm.rooms" ng-show="room.zone=='etage'" class="rooms-bureaux selection" id="{{room.idHtml}}"
-         ng-class="room.free == 1 ? 'free' : 'busy'">
-        <div>
-            <center><b>{{room.name}}</b></center>
+    <div ng-repeat="room in vm.rooms" ng-show="room.zone=='etage'" class="rooms-bureaux selection" id="{{room.idHtml}}">
+        <div class="roomName">
+            {{room.name}}
+        </div>
+        <div class="roomStatus">
+            <span ng-class="room.free == 1 ? 'free' : 'busy'"></span>
         </div>
         <div ng-repeat="occupant in room.occupants" ng-if="occupant.resource != true" ng-drag="false"
              ng-drag-data="user" draggable="false"
              class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
-             data-hasqtip="1" qtip-title="{{occupant.displayName}}">
+             data-hasqtip="1" qtip-title="{{occupant.displayName}}" qtip-content="{{occupant.email}}">
         </div>
     </div>
 
