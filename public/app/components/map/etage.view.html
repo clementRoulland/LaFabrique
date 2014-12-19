@@ -1,66 +1,74 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-	<h1>
-		Étage
-	</h1>
-	<ol class="breadcrumb">
-		<li><a href="/"><i class="fa fa-dashboard"></i> Plan</a></li>
-		<li class="active">Étage</li>
-	</ol>
+    <h1>
+        Étage
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Plan</a></li>
+        <li class="active">Étage</li>
+    </ol>
 </section>
 
 <div class="zone cadre" id="etage" ng-init="vm.googleConnect();vm.loadGroups('etage');vm.loadRooms();vm.loadUsers();">
-	<div class="bureaux-fond cadre-droite">
-		<div class="bureau-fond cadre-bas" id="bureau-assistant">
-		</div>
+    <div class="bureaux-fond cadre-droite">
+        <div class="bureau-fond cadre-bas" id="bureau-assistant">
+        </div>
 
-		<div class="bureau-fond bureau-fond-rue" id="bureau-direction">
-		</div>
-	</div>
-	<div class="etage-plateau">
-		<div id="etage-sanitaires" class="inaccessible cadre-gauche cadre-droite cadre-haut">
-		</div>
+        <div class="bureau-fond bureau-fond-rue" id="bureau-direction">
+        </div>
+    </div>
+    <div class="etage-plateau">
+        <div id="etage-sanitaires" class="inaccessible cadre-gauche cadre-droite cadre-haut">
+        </div>
 
-		<div id="etage-moquette"></div>
-		<div id="vide-escalier" class="inaccessible cadre">
-		</div>
-		<div id="vide-principal" class="inaccessible cadre" ng-drop="true" ng-drop-success="vm.onDropToStack($data,$event)">
-			<div ng-repeat="user in vm.users | orderBy:'fullname'" ng-drag="true" ng-drag-data="user" draggable="false" class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-content="{{user.fullname}}" >
-			</div>
-		</div>
-	</div>
+        <div id="etage-moquette"></div>
+        <div id="vide-escalier" class="inaccessible cadre">
+        </div>
+        <div id="vide-principal" class="inaccessible cadre" ng-drop="true"
+             ng-drop-success="vm.onDropToStack($data,$event)">
+            <div ng-repeat="user in vm.users | orderBy:'fullname'" ng-drag="true" ng-drag-data="user" draggable="false"
+                 class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
+                 data-hasqtip="1" qtip-content="{{user.fullname}}">
+            </div>
+        </div>
+    </div>
 
-	<div class="bureaux-fond bureau-fond-parking cadre-gauche">
-		<div class="bureau-fond cadre-bas" id="bureau-produit">
-		</div>
+    <div class="bureaux-fond bureau-fond-parking cadre-gauche">
+        <div class="bureau-fond cadre-bas" id="bureau-produit">
+        </div>
 
-		<div class="bureau-fond" id="bureau-rh">
-		</div>
-		
-		<div class="bureau-fond inaccessible" id="salle-detente"></div>
-	</div>
+        <div class="bureau-fond" id="bureau-rh">
+        </div>
 
-	<div ng-repeat="room in vm.rooms" ng-show="room.zone=='etage'" class="rooms-bureaux selection" id="{{room.idHtml}}" ng-class="room.free == 1 ? 'free' : 'busy'" >
+        <div class="bureau-fond inaccessible" id="salle-detente"></div>
+    </div>
+
+    <div ng-repeat="room in vm.rooms" ng-show="room.zone=='etage'" class="rooms-bureaux selection" id="{{room.idHtml}}"
+         ng-class="room.free == 1 ? 'free' : 'busy'">
         <div>
             <center><b>{{room.name}}</b></center>
         </div>
-        <div ng-repeat="occupant in room.occupants" ng-drag="false" ng-drag-data="user" draggable="false"
+        <div ng-repeat="occupant in room.occupants" ng-if="occupant.resource != true" ng-drag="false"
+             ng-drag-data="user" draggable="false"
              class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
              data-hasqtip="1" qtip-content="{{occupant.displayName}}">
         </div>
-	</div>
+    </div>
 
 
-	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
-		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
-			<div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropToDesk($data,$event,desktop)">
-				<div class="chaise"></div>
-				<div ng-show="desktop.user" ng-drag="true" ng-drag-data="desktop.user" draggable="false" class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-content="{{desktop.user.fullname}}"  ng-drag-success="vm.onDragFromDesk($data,$event,desktop)">
-				<!--<span style="display: none;">Nom Prénom</span>-->
-			</div>
-			</div>
-			<div class="bureau selection"></div>
-		</div>
-	</div>
+    <div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
+        <div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
+            <div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropToDesk($data,$event,desktop)">
+                <div class="chaise"></div>
+                <div ng-show="desktop.user" ng-drag="true" ng-drag-data="desktop.user" draggable="false"
+                     class="personne empty selection" my-qtip="" style="color: green; display: inline-block;"
+                     skin="green" data-hasqtip="1" qtip-content="{{desktop.user.fullname}}"
+                     ng-drag-success="vm.onDragFromDesk($data,$event,desktop)">
+                    <!--<span style="display: none;">Nom Prénom</span>-->
+                </div>
+            </div>
+            <div class="bureau selection"></div>
+        </div>
+    </div>
 
 </div>
