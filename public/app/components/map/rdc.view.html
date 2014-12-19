@@ -62,8 +62,8 @@
                      qtip-content="{{desktop.user.email}}" ng-drag-success="vm.onDragFromDesk($data,$event,desktop)">
                 </div>
             </div>
-            <div class="bureau selection">
-                <div ng-show="desktop.phone" class="telephone" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-title="{{desktop.phone.shortNumber}}" qtip-content="{{desktop.phone.number}}"></div>
+            <div class="bureau">
+                <div ng-show="desktop.phone" class="telephone" my-qtip="" style="color: green; display: inline-block;" skin="green" data-hasqtip="1" qtip-title="Téléphone" qtip-content="Poste : {{desktop.phone.shortNumber}}<br/>{{desktop.phone.number}}"></div>
             </div>
         </div>
     </div>
