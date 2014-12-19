@@ -1,15 +1,15 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-	<h1>
-		Rez de chaussée
-	</h1>
-	<ol class="breadcrumb">
-		<li><a href="/"><i class="fa fa-dashboard"></i> Plan</a></li>
-		<li class="active">Rez de chaussée</li>
-	</ol>
+    <h1>
+        Rez de chaussée
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Plan</a></li>
+        <li class="active">Rez de chaussée</li>
+    </ol>
 </section>
 
-<div class="zone cadre rdc-plateau" ng-init="vm.loadGroups('rdc');vm.loadUsers();vm.loadRooms();">
+<div class="zone cadre rdc-plateau" ng-init="vm.googleConnect();vm.loadGroups('rdc');vm.loadUsers();vm.loadRooms();">
 	<div id="rdc-zone1">
 	</div>
 	<div id="rdc-zone2">
@@ -37,10 +37,15 @@
 	<div id="bureau-marketing" class="cadre-haut cadre-gauche">
 	</div>
 
-		<div ng-repeat="room in vm.rooms" ng-show="room.zone=='rdc'" class="rooms-bureaux selection" id="{{room.idHtml}}">
-		<div>{{room.name}}</div>
-	</div>
-
+    <div ng-repeat="room in vm.rooms" ng-show="room.zone=='rdc'" class="rooms-bureaux selection" id="{{room.idHtml}}" ng-class="room.free == 1 ? 'free' : 'busy'">
+        <div>
+            <center><b>{{room.name}}</b></center>
+        </div>
+        <div ng-repeat="occupant in room.occupants" ng-drag="false" ng-drag-data="user" draggable="false"
+             class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
+             data-hasqtip="1" qtip-content="{{occupant.displayName}}">
+        </div>
+    </div>
 	<div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
 		<div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
 			<div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropToDesk($data,$event,desktop)">
@@ -52,5 +57,4 @@
 		</div>
 	</div>
 
-	
 </div>
