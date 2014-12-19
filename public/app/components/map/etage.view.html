@@ -53,7 +53,7 @@
         <div ng-repeat="occupant in room.occupants" ng-if="occupant.resource != true" ng-drag="false"
              ng-drag-data="user" draggable="false"
              class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
-             data-hasqtip="1" qtip-title="{{occupant.displayName}}">
+             data-hasqtip="1" qtip-title="{{occupant.displayName}}" qtip-content="{{occupant.email}}">
         </div>
     </div>
 
