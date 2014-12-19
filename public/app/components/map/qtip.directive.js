@@ -12,8 +12,10 @@
 				content: {
 					text: function (event,api) {
             				return element.attr('qtip-content') || null;
+            			},
+					title: function (event,api) {
+            				return element.attr('qtip-title') || null;
             			}
-					/*,title: title*/
 				},
 
 				style: {

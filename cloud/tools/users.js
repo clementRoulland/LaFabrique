@@ -45,11 +45,6 @@ module.exports = [
         "lastName": "Coelho",
     },
 	{
-        "email": "sdebourle@digitaleo.com",
-        "firstName": "Stéphane",
-        "lastName": "Debourle",
-    },
-	{
         "email": "cdouablin@digitaleo.com",
         "firstName": "Christophe",
         "lastName": "Douablin",
@@ -198,11 +193,6 @@ module.exports = [
         "email": "flolicar@digitaleo.com",
         "firstName": "Fabien",
         "lastName": "Lolicar",
-    },
-	{
-        "email": "spotin@digitaleo.com",
-        "firstName": "Sabrina",
-        "lastName": "Potin",
     },
 	{
         "email": "svianey@digitaleo.com",
