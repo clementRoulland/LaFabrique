@@ -101,7 +101,7 @@ module.exports = function(){
 						fullname: itDesktop.get('user').get('fullname'),
 						firstname: itDesktop.get('user').get('firstname'),
 						lastname: itDesktop.get('user').get('lastname'),
-						hasDesk: itDesktop.get('user').get('hasDesk'),
+						free: 1,
 					}:undefined,
 				}
 				desktops.push(desktop);

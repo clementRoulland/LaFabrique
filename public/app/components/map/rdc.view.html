@@ -46,7 +46,7 @@
         <div class="roomStatus">
             <span ng-class="room.free == 1 ? 'free' : 'busy'"></span>
         </div>
-        <div ng-repeat="occupant in room.occupants" ng-if="occupant.resource != true" ng-drag="false"
+        <div ng-repeat="occupant in room.occupants" ng-if="occupant.resource != true && occupant.responseStatus == 'accepted'" ng-drag="false"
              ng-drag-data="user" draggable="false"
              class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
              data-hasqtip="1" qtip-title="{{occupant.displayName}}" qtip-content="{{occupant.email}}">
@@ -59,7 +59,7 @@
                 <div ng-show="desktop.user" ng-drag="true" ng-drag-data="desktop.user" draggable="false"
                      class="personne empty selection" my-qtip="" style="color: green; display: inline-block;"
                      skin="green" data-hasqtip="1" qtip-title="{{desktop.user.fullname}}"
-                     qtip-content="{{desktop.user.email}}" ng-drag-success="vm.onDragFromDesk($data,$event,desktop)">
+                     qtip-content="{{desktop.user.email}}" ng-drag-success="vm.onDragFromDesk($data,$event,desktop)" ng-class="desktop.user.free == 1 ? 'there' : 'away'">
                 </div>
             </div>
             <div class="bureau">

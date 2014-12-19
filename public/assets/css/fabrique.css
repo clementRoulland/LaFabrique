@@ -570,3 +570,7 @@ div.selection:hover {
     background-color: red !important;
 }
 
+.away {
+    opacity: 0.5 !important;
+}
+

@@ -22,7 +22,7 @@
         <div class="roomStatus">
             <span ng-class="room.free == 1 ? 'free' : 'busy'"></span>
         </div>
-        <div ng-repeat="occupant in room.occupants" ng-if="occupant.resource != true" ng-drag="false"
+        <div ng-repeat="occupant in room.occupants" ng-if="occupant.resource != true && occupant.responseStatus == 'accepted'" ng-drag="false"
              ng-drag-data="user" draggable="false"
              class="personne empty selection" my-qtip="" style="color: green; display: inline-block;" skin="green"
              data-hasqtip="1" qtip-title="{{occupant.displayName}}" qtip-content="{{occupant.email}}">

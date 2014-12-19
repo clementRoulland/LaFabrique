@@ -71,6 +71,7 @@ module.exports = function(){
 			firstname: user.get('firstname'),
 			lastname: user.get('lastname'),
 			hasDesk: user.get('hasDesk'),
+			free: 1
 		};
 	}
 
