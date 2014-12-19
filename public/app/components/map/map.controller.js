@@ -5,9 +5,9 @@
         .module('LaFabriqueApp')
         .controller('MapController', MapController);
 
-    MapController.$inject = ['MapFactory', 'RoomFactory', 'UserFactory'];
+    MapController.$inject = ['DeskFactory', 'RoomFactory', 'UserFactory'];
 
-    function MapController(MapFactory, RoomFactory, UserFactory) {
+    function MapController(DeskFactory, RoomFactory, UserFactory) {
         var vm = this;
 
         vm.loadGroups       = loadGroups;
@@ -15,29 +15,32 @@
         vm.loadUsers        = loadUsers;
         vm.onDropToDesk     = onDropToDesk;
         vm.onDragFromDesk   = onDragFromDesk;
-        vm.onDropToNil      = onDropToNil;
-
+        vm.onDropToStack    = onDropToStack;
 
         function onDropToDesk(data,evt,desktop){
+            console.log('onDropToDesk');
+            if(desktop.user){
+                vm.users.push(desktop.user);
+            }
             desktop.user = data;
+            DeskFactory.setDeskUser(desktop, data);
             var index = vm.users.indexOf(data);
-            vm.users.splice(index, 1);  
-            console.log('onDropToDesk  ' + desktop.name);
-            console.log(data);
+            vm.users.splice(index, 1);
         }
 
         function onDragFromDesk(data,evt,desktop){
+            console.log('onDragFromDesk');
             vm.users.push(desktop.user);
             desktop.user = undefined;
-            console.log('onDragFromDesk');
+            DeskFactory.setDeskUser(desktop, undefined);
         }
 
-        function onDropToNil(data,evt){
-            console.log('onDropToNil');
+        function onDropToStack(data,evt){
+            console.log('onDropToStack');
         }
 
         function loadGroups(zone) {
-            MapFactory.getDesktopGroupsByZone(zone)
+            DeskFactory.getDesksGroupsByZone(zone)
                 .then(function (data) {
                     vm.groups = data;
                 })

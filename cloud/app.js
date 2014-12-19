@@ -26,7 +26,7 @@ app.get('/', authentication, function (res, res) {
     });
 });
 
-app.use('/api/desktop_group', require('cloud/controllers/desktop_group'));
+app.use('/api/deskgroup', require('cloud/controllers/deskGroup'));
 app.use('/api/init', require('cloud/controllers/init'));
 app.use('/api/room', require('cloud/controllers/room'));
 app.use('/user', require('cloud/controllers/user'));

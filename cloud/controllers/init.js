@@ -63,7 +63,9 @@ module.exports = function(){
 		var users = require('cloud/tools/users');
 		console.log(users);
 		users.forEach(function(userJSON){
+
 			var userParse = new User();
+			userParse.setACL(acl);
 
 			userParse.setUsername(userJSON.email.split("@")[0]);
 			userParse.setPassword(userJSON.email.split("@")[0]);

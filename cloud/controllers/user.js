@@ -3,10 +3,11 @@
 module.exports = function(){
 	var express = require('express');
 	var app = express();
-    var User = Parse.User;
-    var authentication = require('cloud/tools/require-user.js');
+	var User = Parse.User;
+	var Desktop = Parse.Object.extend('Desktop');
+	var authentication = require('cloud/tools/require-user.js');
 
-    app.get('/', authentication, getAll);
+	app.get('/', authentication, getAll);
 
 	// Render the login page
 	app.get('/login', function(req, res) {
@@ -32,36 +33,64 @@ module.exports = function(){
 		res.redirect('/');
 	});
 
-    function getAll(res, res) {
-        var query = new Parse.Query(User);
-        query.find({
-            success: function (results) {
-                var users = new Array();
-                results.forEach(function(user){
-                    var userToJson = toJSON(user);
-                    users.push(userToJson);
-                });
-                res.json(users);
-            },
-            error: error
-        });
+	function getAll(res, res) {
+		var query = new Parse.Query(User);
+		query.find({
+			success: function (usersFromQuery) {
+				var secondQuery = new Parse.Query(Desktop);
+				secondQuery.find({
+					success: function (desktopsFromQuery) {
+						var usersWithDesktop = new Array();
+						desktopsFromQuery.forEach(function(desktop){
+							if(desktop.has('user')){
+								usersWithDesktop.push(desktop.get('user'));
+							}
+						});
+						console.log(usersWithDesktop);
+						var users = new Array();
+						usersFromQuery.forEach(function(user){
+							console.log(arrayContainsObject(usersWithDesktop, user));
+							if(!arrayContainsObject(usersWithDesktop, user)){
+								var userToJson = toJSON(user);
+								users.push(userToJson);
+							}
+						});
+						res.json(users);
+					},
+					error:error
+				});
+			},
+			error: error
+		});
 	}
 
 	function toJSON(user){
 		return {
+			objectId: user.id,
 			username: user.getUsername(),
 			email: user.getEmail(),
 			fullname: user.get('fullname'),
 			firstname: user.get('firstname'),
 			lastname: user.get('lastname'),
+			hasDesk: user.get('hasDesk'),
 		};
 	}
 
-    function error(object, error) {
-        console.error(error);
-        error.status = 'ko';
-        res.json(error);
-    }
+	function error(object, error) {
+		console.error(error);
+		error.status = 'ko';
+		res.json(error);
+	}
+
+	function arrayContainsObject(array, object){
+		var result = false;
+		array.forEach(function(it){
+			if(it.id == object.id){
+				result = true;
+			}
+		});
+		return result;
+	}
 
 	return app;
 }();
