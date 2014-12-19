@@ -38,7 +38,7 @@ module.exports = function(){
 				parseDesktop.set('name', desktopJSON.name);
 				if(desktopJSON.phone){
 					parseDesktop.set('phone', {
-						'number': '' + desktopJSON.phone.shortNumber,
+						'number': '02 22 43 ' + desktopJSON.phone.shortNumber,
 						'shortNumber': desktopJSON.phone.shortNumber,
 					});
 				}

@@ -6,7 +6,7 @@ module.exports = [
 			{
 				'name': 'etage-1-1',
 				'phone': {
-					'shortNumber': '2323',
+					'shortNumber': '22 75',
 				}
 			},
 			{
@@ -14,9 +14,15 @@ module.exports = [
 			},
 			{
 				'name': 'etage-1-3',
+				'phone': {
+					'shortNumber': '22 90',
+				}
 			},
 			{
 				'name': 'etage-1-4',
+				'phone': {
+					'shortNumber': '22 89',
+				}
 			},
 			{
 				'name': 'etage-1-5',
@@ -47,6 +53,9 @@ module.exports = [
 			},
 			{
 				'name': 'etage-2-6',
+				'phone': {
+					'shortNumber': '22 52',
+				}
 			},
 		],
 	},
@@ -59,15 +68,24 @@ module.exports = [
 			},
 			{
 				'name': 'etage-3-2',
+				'phone': {
+					'shortNumber': '22 66',
+				}
 			},
 			{
 				'name': 'etage-3-3',
+				'phone': {
+					'shortNumber': '22 67',
+				}
 			},
 			{
 				'name': 'etage-3-4',
 			},
 			{
 				'name': 'etage-3-5',
+				'phone': {
+					'shortNumber': '22 61',
+				}
 			},
 			{
 				'name': 'etage-3-6',
@@ -83,6 +101,9 @@ module.exports = [
 			},
 			{
 				'name': 'etage-4-2',
+				'phone': {
+					'shortNumber': '22 68',
+				}
 			},
 			{
 				'name': 'etage-4-3',
@@ -92,9 +113,15 @@ module.exports = [
 			},
 			{
 				'name': 'etage-4-5',
+				'phone': {
+					'shortNumber': '22 84',
+				}
 			},
 			{
 				'name': 'etage-4-6',
+				'phone': {
+					'shortNumber': '22 64',
+				}
 			},
 		],
 	},
@@ -116,6 +143,9 @@ module.exports = [
 			},
 			{
 				'name': 'etage-5-5',
+				'phone': {
+					'shortNumber': '22 72',
+				}
 			},
 			{
 				'name': 'etage-5-6',
@@ -140,9 +170,15 @@ module.exports = [
 			},
 			{
 				'name': 'etage-6-5',
+				'phone': {
+					'shortNumber': '22 60',
+				}
 			},
 			{
 				'name': 'etage-6-6',
+				'phone': {
+					'shortNumber': '22 65',
+				}
 			},
 		],
 	},
@@ -152,6 +188,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'etage-7-1',
+				'phone': {
+					'shortNumber': '22 56',
+				}
 			},
 			{
 				'name': 'etage-7-3',
@@ -176,6 +215,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'etage-assistant-1',
+				'phone': {
+					'shortNumber': '22 93',
+				}
 			},
 		],
 	},
@@ -185,6 +227,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'etage-produit-1',
+				'phone': {
+					'shortNumber': '22 69',
+				}
 			},
 		],
 	},
@@ -194,6 +239,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'etage-rh-1',
+				'phone': {
+					'shortNumber': '22 70',
+				}
 			},
 		],
 	},
@@ -203,21 +251,36 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'rdc-1-1',
+				'phone': {
+					'shortNumber': '22 59',
+				}
 			},
 			{
 				'name': 'rdc-1-2',
 			},
 			{
 				'name': 'rdc-1-3',
+				'phone': {
+					'shortNumber': '22 88',
+				}
 			},
 			{
 				'name': 'rdc-1-4',
+				'phone': {
+					'shortNumber': '22 57',
+				}
 			},
 			{
 				'name': 'rdc-1-5',
+				'phone': {
+					'shortNumber': '22 73',
+				}
 			},
 			{
 				'name': 'rdc-1-6',
+				'phone': {
+					'shortNumber': '22 53',
+				}
 			},
 		],
 	},
@@ -302,9 +365,15 @@ module.exports = [
 			},
 			{
 				'name': 'rdc-5-4',
+				'phone': {
+					'shortNumber': '22 62',
+				}
 			},
 			{
 				'name': 'rdc-5-5',
+				'phone': {
+					'shortNumber': '22 80',
+				}
 			},
 			{
 				'name': 'rdc-5-6',
@@ -317,6 +386,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'rdc-6-1',
+				'phone': {
+					'shortNumber': '22 54',
+				}
 			},
 			{
 				'name': 'rdc-6-2',
@@ -326,12 +398,21 @@ module.exports = [
 			},
 			{
 				'name': 'rdc-6-4',
+				'phone': {
+					'shortNumber': '22 83',
+				}
 			},
 			{
 				'name': 'rdc-6-5',
+				'phone': {
+					'shortNumber': '22 87',
+				}
 			},
 			{
 				'name': 'rdc-6-6',
+				'phone': {
+					'shortNumber': '22 82',
+				}
 			},
 		],
 	},
@@ -347,15 +428,24 @@ module.exports = [
 			},
 			{
 				'name': 'rdc-7-3',
+				'phone': {
+					'shortNumber': '22 63',
+				}
 			},
 			{
 				'name': 'rdc-7-4',
+				'phone': {
+					'shortNumber': '22 77',
+				}
 			},
 			{
 				'name': 'rdc-7-5',
 			},
 			{
 				'name': 'rdc-7-6',
+				'phone': {
+					'shortNumber': '22 81',
+				}
 			},
 		],
 	},
@@ -368,15 +458,27 @@ module.exports = [
 			},
 			{
 				'name': 'rdc-8-2',
+				'phone': {
+					'shortNumber': '22 55',
+				}
 			},
 			{
 				'name': 'rdc-8-3',
+				'phone': {
+					'shortNumber': '22 78',
+				}
 			},
 			{
 				'name': 'rdc-8-4',
+				'phone': {
+					'shortNumber': '22 91',
+				}
 			},
 			{
 				'name': 'rdc-8-5',
+				'phone': {
+					'shortNumber': '22 92',
+				}
 			},
 			{
 				'name': 'rdc-8-6',
@@ -389,6 +491,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'rdc-commerce-1',
+				'phone': {
+					'shortNumber': '22 74',
+				}
 			},
 		],
 	},
@@ -398,6 +503,9 @@ module.exports = [
 		'desktops': [
 			{
 				'name': 'rdc-marketing-1',
+				'phone': {
+					'shortNumber': '22 71',
+				}
 			},
 		],
 	},
