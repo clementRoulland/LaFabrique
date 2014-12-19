@@ -91,12 +91,12 @@ div.selection:hover {
     position: relative;
 }
     .telephone {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         position: absolute;
-        background-color: green;
-        top: 30px;
-        left: 10px;
+        background-color: #777;
+        top: 10px;
+        left: 12px;
     }
 
 .zone-chaise {
