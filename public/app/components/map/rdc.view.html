@@ -50,6 +50,7 @@
              data-hasqtip="1" qtip-content="{{occupant.displayName}}">
         </div>
     </div>
+    
     <div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
         <div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
             <div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropToDesk($data,$event,desktop)">
@@ -60,8 +61,9 @@
                      ng-drag-success="vm.onDragFromDesk($data,$event,desktop)">
                 </div>
             </div>
-            <div class="bureau selection"></div>
+            <div class="bureau selection">
+            	<div class="telephone"></div>
+            </div>
         </div>
     </div>
-
 </div>

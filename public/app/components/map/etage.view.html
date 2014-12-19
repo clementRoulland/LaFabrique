@@ -55,7 +55,6 @@
         </div>
     </div>
 
-
     <div ng-repeat="group in vm.groups" class="groupe-bureaux" id="{{group.name}}">
         <div ng-repeat="desktop in group.desktops" class="poste-travail" id="{{desktop.name}}">
             <div class="zone-chaise" ng-drop="true" ng-drop-success="vm.onDropToDesk($data,$event,desktop)">
@@ -67,7 +66,9 @@
                     <!--<span style="display: none;">Nom Prénom</span>-->
                 </div>
             </div>
-            <div class="bureau selection"></div>
+            <div class="bureau selection">
+            	<div class="telephone"></div>
+            </div>
         </div>
     </div>
 
