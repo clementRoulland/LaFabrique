@@ -106,7 +106,6 @@
                                     if (calendarEvent.items.length != 0) {
                                         room.occupants = calendarEvent.items[0].attendees;
                                     }
-                                    console.log(room.occupants);
                                     vm.rooms[key] = room;
                                 });
                             });
