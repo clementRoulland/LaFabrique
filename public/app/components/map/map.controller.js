@@ -5,9 +5,9 @@
         .module('LaFabriqueApp')
         .controller('MapController', MapController);
 
-    MapController.$inject = ['DeskFactory', 'RoomFactory', 'UserFactory'];
+    MapController.$inject = ['DeskFactory', 'RoomFactory', 'UserFactory', '$scope'];
 
-    function MapController(DeskFactory, RoomFactory, UserFactory) {
+    function MapController(DeskFactory, RoomFactory, UserFactory, $scope) {
         var vm = this;
 
         vm.loadGroups = loadGroups;
@@ -28,8 +28,8 @@
         //var clientId = '1041314402552-16v78jod7ot759svtt2duc9s2ejkuiu7.apps.googleusercontent.com';
         //var apiKey = 'AIzaSyBZ8qJ4uPi_xRl4RSLd3NdIEovycxo7vVs';
         //fabien
-        //var clientId = '982590332371-9oig79t588rnf7qrr6e0p2gk5qgn0m8h.apps.googleusercontent.com';
-        //var apiKey = 'AIzaSyBiCbCx8y5RkUSvumROQ-IqxR-IPY2X_sY';
+        var clientId = '982590332371-9oig79t588rnf7qrr6e0p2gk5qgn0m8h.apps.googleusercontent.com';
+        var apiKey = 'AIzaSyBiCbCx8y5RkUSvumROQ-IqxR-IPY2X_sY';
         //prod 
         //var clientId = '1041314402552-bhq652ar91lkgt0p34b9lfc5s35lfuh3.apps.googleusercontent.com';
         //var apiKey = 'AIzaSyDZBvhfuJWIckuow7JeZRaE3FLxVid24VI';
@@ -123,7 +123,8 @@
                                             }
                                         });
                                     }
-                                    vm.rooms[key] = room;
+                                    //vm.rooms[key] = room;
+                                    $scope.$apply(function(){vm.rooms[key] = room});
                                 });
                             });
                         });
